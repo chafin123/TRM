@@ -1,7 +1,9 @@
 .container {
   padding: 0 2rem;
 }
-
+.header{
+  @apply bg-black;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;

@@ -1,0 +1,11 @@
+.phone {
+    @apply text-xs
+}
+
+.location {
+    @apply text-xs
+}
+
+.schedule {
+    @apply text-xs
+}
