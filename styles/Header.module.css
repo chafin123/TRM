@@ -1,0 +1,15 @@
+.navigation {
+    @apply text-white px-12 py-10 flex;
+    & > p {
+        @apply mx-2 my-1;
+    }
+}
+.logo {
+    @apply mt-4;
+}
+.info {
+    @apply flex-col flex-wrap w-fit mt-8;
+    & > div {
+        @apply flex w-fit justify-between;
+    }
+}

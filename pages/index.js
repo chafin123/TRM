@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/organism/Header'
+import Carousel from '../components/organism/Carousel'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <Header className={styles.header}/>
 
       <main className={styles.main}>
-      
+        <Carousel />
       </main>
 
       <footer className={styles.footer}>

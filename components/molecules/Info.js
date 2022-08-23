@@ -4,12 +4,17 @@ import Schedule from '../atoms/Schedule';
 import styles from '../../styles/Info.module.css'
 
 
-const Info = () => {
+const Info = (props) => {
     return (
-        <div className={className}>
-            <Phone className={styles.phone}/>
-            <Location className={styles.location}/>
-            <Schedule className={styles.schedule}/>
+        <div className={props.className}>
+            <div>
+                <Phone className={styles.phone}/>
+                <Location className={styles.location}/>
+            </div>        
+            <div>
+                <Schedule className={styles.schedule}/>
+            </div>
+        
         </div>
     )
 }

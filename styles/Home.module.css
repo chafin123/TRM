@@ -1,8 +1,5 @@
-.container {
-  padding: 0 2rem;
-}
 .header{
-  @apply bg-black;
+  @apply bg-black flex justify-between w-full;
 }
 .main {
   min-height: 100vh;

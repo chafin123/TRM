@@ -1,15 +1,20 @@
 import Image from "next/dist/client/image"
 
-const Phone = () => {
+const Phone = (props) => {
     return (
-        <div className={className}>
-            <Image 
-                src="/icons/bigPhone.png"
-                alt="Phone Icon"
-                height={100}
-                width={100}
-            />
-            <a href="tel: +1-907-376-722">907.376.722</a>
+        <div className={props.className}>
+            <div>
+                <Image 
+                    src="/icons/bigPhone.png"
+                    alt="Phone Icon"
+                    height={20}
+                    width={15}
+                />
+            </div>
+            <div>
+                <a href="tel: +1-907-376-722">907.376.722</a>
+            </div>
+        
         </div>
     )
 }

@@ -1,11 +1,28 @@
 .phone {
-    @apply text-xs
+    @apply text-xs text-white flex align-middle justify-between;
+    &  > :first-child {
+        @apply pr-1;
+    }
+    & > div {
+    }
 }
 
 .location {
-    @apply text-xs
+    @apply text-xs text-white flex align-text-top justify-between px-10;
+    & > :first-child {
+        @apply pr-1;
+    }
+    & > div {
+        @apply align-top;
+    }
 }
 
 .schedule {
-    @apply text-xs
+    @apply text-xs text-white flex align-middle justify-between mt-4;
+    & > div {
+        @apply flex pr-1 mb-2;
+        & > p {
+            @apply underline px-1;
+        }
+    }
 }

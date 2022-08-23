@@ -1,10 +1,10 @@
 
 
-const Navigation = () => {
+const Navigation = (props) => {
     return (
-        <div className={className}>
-            <p>Menu</p>
-            <p>Info</p>
+        <div className={props.className}>
+            <p>MENU</p>
+            <p>INFO</p>
         </div>
     )
 }
