@@ -1,61 +1,82 @@
 import Image from "next/dist/client/image"
 import Button from "../atoms/Button"
-import imageArray from "../atoms/Image"
+import data from '../atoms/Image.json'
 import styles from '../../styles/Carousel.module.css'
-
+import { useState, useRef, useEffect } from "react"
 
 const Carousel = () => {
-
     
-    let carouselPosition = 0;
-    const changeImage = (next) => {
-        next ? 
-        carouselPosition >= 6 ? carouselPosition = 0 : carouselPosition ++ :
-        carouselPosition <= 0 ? carouselPosition = 6 : carouselPosition -- ;
-        console.log(`carousel position : ${carouselPosition}`);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const carousel = useRef(null);
+    
+    const movePrev = () => {
+        currentIndex <= 0 ? setCurrentIndex(7) : setCurrentIndex((prevState) => prevState -1)
+    };
+
+    const moveNext = () => {
+        currentIndex >= 7 ? setCurrentIndex(0) : setCurrentIndex((prevState) => prevState + 1) 
     }
 
+      
     return (
-        <div className={styles.carouselContainer}>
-            <Button 
-                classNamePrev={styles.prevButton}
-                onClickPrev={() => changeImage(false)}
-                classNameNext={styles.nextButton}
-                onClickNext={() => changeImage(true)}
-            />
-            <div className={styles.imageContainer}>
-                {imageArray.map((image, i) => {
-                    if(i = 1) {
-                    return <div key={i} className={styles.active}>    
+        <div className={styles.carouselOuter} >
+            <div className={styles.carouselInner}>
+                <div className={styles.buttonContainer}>
+                    <button
+                        onClick={movePrev}
+                        className={styles.prevButton}
+                    >
                         <Image 
-                            src={image.src}
-                            alt={image.alt}
-                            height={100}
-                            width={100}
-                            layout='responsive'
-                        />
-                    </div>
-                    } return    <div key={i} className={styles.notActive}>    
+                        src='/icons/left-arrow-free.svg'
+                        alt='previous arrow'
+                        height={100}
+                        width={100}
+                    />
+                    <span className={styles.screenReader}>Previous</span>
+                    </button>
+                    <button
+                        onClick={moveNext}
+                        className={styles.nextButton}
+                    >
+                        <Image 
+                        src='/icons/right-arrow-free.svg'
+                        alt='next arrow'
+                        height={100}
+                        width={100}
+                    />
+                    <span className={styles.screenReader}>Next</span>
+                    </button>
+                </div>
+                <div
+                    ref={carousel}
+                    className={styles.carouselContainer}
+                >
+                    {data.imageArray.map((image, index) => {
+                        if (index === currentIndex) {    
+                            return (
+                                <div
+                                    key={index}
+                                    className={styles.carouselItem}
+                                >
                                     <Image 
                                         src={image.src}
                                         alt={image.alt}
-                                        height={100}
-                                        width={100}
-                                        layout='responsive'
+                                        className={styles.carouselImage}
+                                        layout="fill"
                                     />
+                                    <h3
+                                        className={styles.carouselImageText}
+                                    >
+                                        {image.name}    
+                                    </h3>
                                 </div>
-                    
-                })}
+                            )
+                        }
+                    })}
+                </div>
             </div>
-            <div className={styles.logo}>
-                <Image 
-                    src="/icons/fronteirsman-award.png"
-                    alt="2021 Best of The Valley Award from Mat-Su Valley Frontiersman"
-                    height={500}
-                    width={500}
-                />
-            </div>
-
         </div>
     )
 }

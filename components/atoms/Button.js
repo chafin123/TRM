@@ -5,7 +5,9 @@ const Button = (props) => {
         <>
             <button
                 className={props.classNamePrev}
-                onClick={props.onClickPrev}
+                type="button"
+                data-bs-target={props.dataTarget}
+                data-bs-slide={props.dataSlidePrev}
             >
                 <span>
                 {/* change svgs to non attributed */}
@@ -19,7 +21,9 @@ const Button = (props) => {
             </button>
             <button
                 className={props.classNameNext}
-                onClick={props.onClickNext}
+                type="button"
+                data-bs-target={props.dataTarget}
+                data-bs-slide={props.dataSlideNext}
             >
                 <span>
                     <Image 

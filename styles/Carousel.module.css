@@ -1,22 +1,41 @@
-.carouselContainer {
-    @apply w-full overflow-hidden;
-}
-.prevButton {
-    @apply absolute top-0 bottom-0 flex items-center justify-center p-0 text-center 
-    border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0;
-    & > span {
-        @apply inline-block bg-no-repeat z-10;
+.carouselOuter {
+    @apply w-full mx-auto;
+    
+    & > .carouselInner {
+        @apply relative w-full overflow-hidden;
+        
+        & > .buttonContainer {
+            @apply flex justify-between absolute top-0 left-0 w-full h-full;
+            
+            & > .prevButton {
+                @apply  text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300;
+            }
+            
+            & > .nextButton {
+                @apply  text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300;
+            }
+        }
+        
+        & > .carouselContainer {
+            @apply relative overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0;
+            
+            & > .carouselItem {
+                @apply text-center relative w-full h-96 snap-start;
+                
+                & > .carouselImage {
+                    @apply w-full aspect-square;
+                }
+                
+                & > .carouselItemText {
+                    @apply text-white py-6 px-3 mx-auto text-xl;
+                }
+            }
+        }
     }
 }
-.nextButton {
-    @apply absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0;
-    & > span {
-        @apply inline-block bg-no-repeat z-10;
-    }
-}
+    
+
+
 .logo {
-    @apply z-10
-}
-.active {
-    @apply hidden;
+    @apply z-10;
 }

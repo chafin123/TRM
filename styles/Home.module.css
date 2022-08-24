@@ -2,6 +2,7 @@
   @apply bg-black flex justify-between w-full;
 }
 .main {
+  @apply 2xl:container 2xl:mx-auto 2xl:px-0 py-3 px-10;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
