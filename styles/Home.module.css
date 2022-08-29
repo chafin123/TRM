@@ -1,5 +1,5 @@
 .header{
-  @apply flex justify-between w-full;
+  @apply flex justify-between w-full py-4;
 }
 .main {
   @apply 2xl:px-0 flex flex-1 flex-col h-full w-full mx-auto items-center;

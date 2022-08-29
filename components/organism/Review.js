@@ -19,12 +19,12 @@ const Review = () => {
                         src='/icons/google-review.png'
                         alt='5 star Google review'
                         className={styles.logo}
-                        height={50}
-                        width={300}
+                        height={30}
+                        width={170}
                     />
                 </div>    
                 <div className={styles.reviewText}>
-                    <p className={styles.text}>{data.reviews[0].text}</p>
+                    <p className={styles.text}>{`"${data.reviews[0].text}"`}</p>
                     <p className={styles.author}>-{data.reviews[0].author}</p>
                 </div>
             </div>

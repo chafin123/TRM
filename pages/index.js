@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/organism/Header'
 import Carousel from '../components/organism/Carousel'
 import styles from '../styles/Home.module.css'
 import Welcome from '../components/organism/Welcome'
 import Review from '../components/organism/Review'
+import Footer from '../components/organism/Footer'
 
 export default function Home() {
   return (
@@ -21,8 +21,8 @@ export default function Home() {
         <Carousel className={styles.Carousel}/>
         <Welcome/>
       </main>
-
       <Review />
+      <Footer />
     </div>
   )
 }

@@ -33,6 +33,6 @@ const Welcome = (props) => {
             </div>
         </div>
     )
-}
+} 
 
 export default Welcome

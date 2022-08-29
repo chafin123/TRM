@@ -1,12 +1,12 @@
 .container {
-    @apply pt-0 flex flex-row align-top h-fit;
+    @apply flex flex-row w-full;
 
     & > .welcomeBlock {
-        @apply bg-[#B12A1B] relative flex flex-row bg-[url('/images/bg-images/welcome-bg-waves.png')] bg-opacity-95;
+        @apply bg-[#B12A1B] w-full relative flex flex-row bg-[url('/images/bg-images/welcome-bg-waves.png')] bg-opacity-95;
         
         & > .textBlock {
 
-            @apply w-1/2 py-16 pl-20 text-white;
+            @apply w-2/6 py-16 pl-20 text-white;
 
             & > h2 {
 

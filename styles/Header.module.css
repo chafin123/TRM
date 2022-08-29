@@ -1,7 +1,7 @@
 .navigation {
     @apply text-white px-12 pt-10 flex;
     & > p {
-        @apply mx-2 my-1;
+        @apply mx-2 my-1 tracking-widest text-sm;
     }
 }
 .logo {

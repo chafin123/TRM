@@ -67,7 +67,7 @@ const Carousel = () => {
                                         className={styles.carouselImage}
                                         height={1080}
                                         width={1920}
-                                        layout="intrinsic"
+                                        layout="responsive"
                                     />
                                     <h3
                                         className={styles.carouselImageText}

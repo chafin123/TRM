@@ -10,10 +10,10 @@
     }
 
     & > .review {
-        @apply flex flex-col w-1/2 m-20;
+        @apply flex flex-col w-1/5 m-20 italic;
 
         & > .logoContainer {
-            @apply w-fit;
+            @apply w-fit pb-3;
 
             & > .logo {
                 @apply self-center;
@@ -24,7 +24,7 @@
             @apply text-white font-nova-sans flex flex-col;
 
             & > .author {
-                @apply justify-self-end;
+                @apply place-self-end;
             }
         }
     }
