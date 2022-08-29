@@ -4,6 +4,10 @@
     & > .carouselInner {
         @apply relative w-full h-full overflow-hidden;
         
+        & > .logo {
+            @apply absolute bottom-0 z-10;
+        }
+
         & > .buttonContainer {
             @apply flex justify-between absolute top-0 left-0 w-full h-full;
             
@@ -38,9 +42,7 @@
                     @apply text-white right-10 bottom-10 absolute text-xl;
                 }
                 
-                & > .logo {
-                    @apply absolute bottom-10 ml-96 z-10;
-                }
+
             }
         }
     }

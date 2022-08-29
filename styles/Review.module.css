@@ -1,0 +1,35 @@
+.reviewContainer {
+    @apply relative justify-center items-center w-full flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')];
+
+    & > .bowlContainer {
+        @apply  absolute -left-36 -top-12;
+        
+        & > .sashimiBowl {
+        
+        }
+    }
+
+    & > .review {
+        @apply flex flex-col w-1/2 m-20;
+
+        & > .logoContainer {
+            @apply w-fit;
+
+            & > .logo {
+                @apply self-center;
+            }
+        }
+
+        & > .reviewText {
+            @apply text-white font-nova-sans flex flex-col;
+
+            & > .author {
+                @apply justify-self-end;
+            }
+        }
+    }
+
+    & > .sushiContainer {
+    @apply absolute -right-4 top-16
+    }
+}

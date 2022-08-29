@@ -4,6 +4,7 @@ import Header from '../components/organism/Header'
 import Carousel from '../components/organism/Carousel'
 import styles from '../styles/Home.module.css'
 import Welcome from '../components/organism/Welcome'
+import Review from '../components/organism/Review'
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Welcome/>
       </main>
 
-
+      <Review />
     </div>
   )
 }
