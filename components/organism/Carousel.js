@@ -36,6 +36,14 @@ const Carousel = () => {
                     />
                     <span className={styles.screenReader}>Previous</span>
                     </button>
+                    <div className={styles.logo}>
+                        <Image 
+                            src="/icons/frontiersman-award.png"
+                            alt="2021 Frontiersman Best of The Valley award"
+                            height={60}
+                            width={140}
+                        />
+                    </div>
                     <button
                         onClick={moveNext}
                         className={styles.nextButton}
@@ -79,14 +87,7 @@ const Carousel = () => {
                         }
                     })}
                 </div>
-                    <div className={styles.logo}>
-                        <Image 
-                            src="/icons/frontiersman-award.png"
-                            alt="2021 Frontiersman Best of The Valley award"
-                            height={60}
-                            width={140}
-                        />
-                    </div>
+
             </div>
         </div>
     )

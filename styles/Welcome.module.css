@@ -1,12 +1,15 @@
 .container {
     @apply flex flex-row w-full;
 
+    & > .welcomePictureContainer {
+        @apply w-4/12;
+    } 
     & > .welcomeBlock {
         @apply bg-[#B12A1B] w-full relative flex flex-row bg-[url('/images/bg-images/welcome-bg-waves.png')] bg-opacity-95;
         
         & > .textBlock {
 
-            @apply w-2/6 py-16 pl-20 text-white;
+            @apply w-2/5 py-16 pl-20 text-white;
 
             & > h2 {
 
@@ -15,17 +18,13 @@
 
             & > p {
 
-                @apply font-nova-sans text-base;
+                @apply font-nova-sans text-base pt-4;
             }
         }
         & > .backgroundBlock {
 
             @apply absolute right-2 -bottom-2 h-fit;
 
-            & > .bgMountain {
-
-                @apply z-50
-            }
         }
     }
 }

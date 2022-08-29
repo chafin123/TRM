@@ -4,8 +4,8 @@
 
 html,
 body {
-  @apply bg-[url('/images/bg-images/black-bg.jpg')] w-full mx-auto;
-
+  @apply  bg-[url('/images/bg-images/black-bg.jpg')] lg:w-[1440px] mx-auto;
+  
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

@@ -8,8 +8,8 @@ const Review = () => {
                 <Image 
                     src='/images/sashimi-bowl.png'
                     alt="Sashimi Bowl"
-                    height={400}
-                    width={400}
+                    height={300}
+                    width={300}
                     className={styles.sashimiBowl}
                 />
             </div>

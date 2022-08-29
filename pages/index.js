@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Welcome from '../components/organism/Welcome'
 import Review from '../components/organism/Review'
 import Footer from '../components/organism/Footer'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
       <main className={styles.main}>
         <Carousel className={styles.Carousel}/>
         <Welcome/>
+        <Review />
       </main>
-      <Review />
       <Footer />
     </div>
   )

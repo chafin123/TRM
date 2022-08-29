@@ -1,19 +1,16 @@
 .reviewContainer {
-    @apply relative justify-center items-center w-full flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')];
+    @apply relative justify-center items-center w-full mt-[-40px] flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom bg-no-repeat ;
 
     & > .bowlContainer {
-        @apply  absolute -left-36 -top-12;
+        @apply  absolute -left-28 top-1;
         
-        & > .sashimiBowl {
-        
-        }
     }
 
     & > .review {
         @apply flex flex-col w-1/5 m-20 italic;
 
         & > .logoContainer {
-            @apply w-fit pb-3;
+            @apply w-fit;
 
             & > .logo {
                 @apply self-center;
@@ -30,6 +27,6 @@
     }
 
     & > .sushiContainer {
-    @apply absolute -right-4 top-16
+    @apply absolute -right-4 top-24 z-10;
     }
 }

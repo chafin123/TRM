@@ -4,17 +4,17 @@ import Info from "../molecules/Info";
 import Navigation from "../molecules/Navigation";
 import styles from "../../styles/Header.module.css";
 
-const Header = (props) => {
+const Header = () => {
     return (
-        <div className={props.className}>
+        <div className={styles.header}>
             <Navigation className={styles.navigation} />
             <div className={styles.logo}>
 
                 <Image 
                     src="/icons/headerLogo.png"
                     alt="Basil Ginger"
-                    height={70}
-                    width={130}
+                    height={90}
+                    width={150}
                 />
             </div>     
 

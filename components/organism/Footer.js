@@ -34,23 +34,30 @@ const Footer = () => {
                 </a>
                 <div className={styles.iconContainer}>
                     <a>
-                        <SocialIcon url="https://www.facebook.com/basilgingerrestaurant/" 
-                            bgColor='transparent'
-                            fgColor='white'
+                        <Image 
+                            src='/icons/facebook.png'
+                            alt='facebook icon'
+                            height={20}
+                            width={20}
                         />
                     </a>
                     <a>
-                        <SocialIcon  network='instagram'
-                            bgColor='transparent'
-                            fgColor='white'
+                        <Image 
+                            src='/icons/instagram.png'
+                            alt='facebook icon'
+                            height={20}
+                            width={20}
                         />
+
                     </a>
                     <a>
-                        <SocialIcon url="mailto:" 
-                        network='email'
-                            bgColor='transparent'
-                            fgColor='white'
+                        <Image 
+                            src='/icons/email.png'
+                            alt='facebook icon'
+                            height={16}
+                            width={20}
                         />
+
                     </a>
                 </div>
             </div>

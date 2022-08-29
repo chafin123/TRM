@@ -1,7 +1,7 @@
 .phone {
     @apply text-xs text-white flex align-middle justify-between;
     &  > :first-child {
-        @apply pr-1;
+        @apply pr-2;
     }
     & > div {
     }
@@ -10,7 +10,7 @@
 .location {
     @apply text-xs text-white flex align-text-top justify-between px-10;
     & > :first-child {
-        @apply pr-1;
+        @apply pr-2;
     }
     & > div {
         @apply align-top;

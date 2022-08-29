@@ -8,7 +8,7 @@ const Welcome = (props) => {
                 <Image 
                     src="/images/welcome.jpg"
                     alt="The chef owners welcoming you in"
-                    layout="intrinsic"
+                    layout="responsive"
                     height={300}
                     width={300}
                 />
