@@ -1,5 +1,5 @@
 .footerContainer {
-    @apply flex md:flex-row relative justify-between w-full text-white px-44 py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
+    @apply flex flex-col md:flex-row relative lg:justify-between w-full text-white px-5 md:px-10 lg:px-44 lg:py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
     
     & > div {
 
@@ -13,7 +13,7 @@
     }    
     
     & > .logoContainer {
-        @apply border-r-4 border-white pr-20 items-center pt-4 h-fit;
+        @apply lg:border-r-4 border-white lg:pr-20 self-center md:pt-4 h-fit;
     }
 
     & > .contact {

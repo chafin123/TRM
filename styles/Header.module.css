@@ -1,8 +1,8 @@
 .header{
-    @apply flex justify-between w-full py-4 bg-gradient-to-r from-black/[0.6] to-black/[0.4];
+    @apply flex flex-col md:flex-row justify-center items-center lg:justify-between w-full py-4 bg-gradient-to-r from-black/[0.6] to-black/[0.4] md:order-1;
   
     & > .navigation {
-        @apply text-white px-12 pt-10 flex pr-40;
+        @apply text-white lg:px-12 pt-10 flex lg:pr-40 order-2 md:order-1;
     
         & > p {
             @apply ml-4 my-1 tracking-widest text-sm;
@@ -10,11 +10,11 @@
     }
 
     & > .logo {
-        @apply pt-2;
+        @apply pt-2 order-1 md:order-2;
     }
 
     & > .info {
-        @apply flex-col flex-wrap w-fit mt-8;
+        @apply flex-col flex-wrap w-fit mt-8 order-3 pl-6 lg:pl-0;
         
         & > div {
             @apply flex w-fit justify-between;

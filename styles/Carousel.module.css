@@ -1,5 +1,5 @@
 .carouselOuter {
-    @apply w-full mb-[-6px];
+    @apply w-full ;
     
     & > .carouselInner {
         @apply relative w-full h-full overflow-hidden;
@@ -10,7 +10,7 @@
             @apply flex justify-between absolute top-0 left-0 w-full h-full;
             
             & > .prevButton {
-                @apply  text-white w-10 h-full text-center z-10 p-0 m-0 transition-all ease-in-out duration-300;
+                @apply  text-white w-10 h-full text-center z-10 p-0 m-0;
 
                 & > span {
                     @apply hidden;
@@ -18,14 +18,18 @@
             }
             
             & > .nextButton {
-                @apply  text-white w-10 h-full text-center z-10 p-0 m-0 transition-all ease-in-out duration-300;
+                @apply  text-white w-10 h-full text-center z-10 p-0 m-0;
                 
                 & > span {
                     @apply hidden;
                 }
             }
             & > .logo {
-                @apply  pb-10 self-end z-10;
+                @apply  pb-10 self-end z-10 invisible md:visible;
+            }
+
+            & > .carouselGradient {
+                @apply absolute left-0 bottom-0 bg-gradient-to-r from-black/[0.3] to-black/[0.2] lg:from-black w-full h-1/6 z-10;
             }
         }
         
@@ -40,7 +44,7 @@
                 }
                 
                 & > .carouselImageText {
-                    @apply text-white right-10 bottom-10 absolute text-xl ;
+                    @apply text-white right-24 md:right-10 bottom-2 md:bottom-10 absolute text-xl;
                 }
                 
 

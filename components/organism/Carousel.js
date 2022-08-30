@@ -36,6 +36,7 @@ const Carousel = () => {
                     />
                     <span className={styles.screenReader}>Previous</span>
                     </button>
+                    <div className={styles.carouselGradient}></div>
                     <div className={styles.logo}>
                         <Image 
                             src="/icons/frontiersman-award.png"

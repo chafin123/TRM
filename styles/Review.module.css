@@ -1,5 +1,5 @@
 .reviewContainer {
-    @apply relative justify-center items-center w-full mt-[-40px] flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom bg-no-repeat ;
+    @apply relative justify-center items-center w-full flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom bg-no-repeat ;
 
     & > .bowlContainer {
         @apply  absolute -left-28 top-1 invisible md:visible;
@@ -7,7 +7,7 @@
     }
 
     & > .review {
-        @apply flex flex-col md:w-1/5 m-5 lg:m-20 italic;
+        @apply flex flex-col md:w-2/6 p-5 lg:p-12 italic;
 
         & > .logoContainer {
             @apply w-fit;
@@ -21,12 +21,12 @@
             @apply text-white font-nova-sans flex flex-col;
 
             & > .author {
-                @apply place-self-end;
+                @apply place-self-end text-sm;
             }
         }
     }
 
     & > .sushiContainer {
-    @apply absolute -right-4 top-24 z-10 invisible md:visible ;
+    @apply absolute -right-4 top-24 z-10 invisible lg:visible ;
     }
 }
