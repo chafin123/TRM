@@ -1,5 +1,5 @@
 .footerContainer {
-    @apply flex flex-row relative justify-between w-full text-white px-44 py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
+    @apply flex md:flex-row relative justify-between w-full text-white px-44 py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
     
     & > div {
 

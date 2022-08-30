@@ -2,12 +2,12 @@
     @apply relative justify-center items-center w-full mt-[-40px] flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom bg-no-repeat ;
 
     & > .bowlContainer {
-        @apply  absolute -left-28 top-1;
+        @apply  absolute -left-28 top-1 invisible md:visible;
         
     }
 
     & > .review {
-        @apply flex flex-col w-1/5 m-20 italic;
+        @apply flex flex-col md:w-1/5 m-5 lg:m-20 italic;
 
         & > .logoContainer {
             @apply w-fit;
@@ -27,6 +27,6 @@
     }
 
     & > .sushiContainer {
-    @apply absolute -right-4 top-24 z-10;
+    @apply absolute -right-4 top-24 z-10 invisible md:visible ;
     }
 }

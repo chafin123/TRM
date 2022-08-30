@@ -1,5 +1,5 @@
 .carouselOuter {
-    @apply w-full mb-[-6px] ;
+    @apply w-full mb-[-6px];
     
     & > .carouselInner {
         @apply relative w-full h-full overflow-hidden;
