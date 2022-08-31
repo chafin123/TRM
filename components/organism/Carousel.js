@@ -29,7 +29,7 @@ const Carousel = () => {
                         className={styles.prevButton}
                     >
                         <Image 
-                        src='/icons/left-arrow-free.svg'
+                        src='/icons/prev-button.png'
                         alt='previous arrow'
                         height={100}
                         width={100}
@@ -50,7 +50,7 @@ const Carousel = () => {
                         className={styles.nextButton}
                     >
                         <Image 
-                        src='/icons/right-arrow-free.svg'
+                        src='/icons/next-button.png'
                         alt='next arrow'
                         height={100}
                         width={100}

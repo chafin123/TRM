@@ -7,6 +7,8 @@ import Review from '../components/organism/Review'
 import Footer from '../components/organism/Footer'
 
 export default function Home() {
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,13 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/vbe1upt.css"></link>
       </Head>
-      <Header/>
+      <Header href='#bop'/>
 
       <main className={styles.main}>
         <Carousel/>
         <Welcome/>
         <Review />
-        <Footer />
+        <Footer id='bop'/>
       </main>
     </div>
   )

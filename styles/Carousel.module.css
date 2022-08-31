@@ -10,7 +10,7 @@
             @apply flex justify-between absolute top-0 left-0 w-full h-full;
             
             & > .prevButton {
-                @apply  text-white w-10 h-full text-center z-10 p-0 m-0;
+                @apply  text-white w-10 h-full text-center z-10 p-0 m-0 pl-4;
 
                 & > span {
                     @apply hidden;
@@ -18,14 +18,14 @@
             }
             
             & > .nextButton {
-                @apply  text-white w-10 h-full text-center z-10 p-0 m-0;
+                @apply  text-white w-10 h-full text-center z-10 p-0 m-0 pr-4;
                 
                 & > span {
                     @apply hidden;
                 }
             }
             & > .logo {
-                @apply  pb-10 self-end z-10 invisible md:visible;
+                @apply  pb-4 self-end z-10 invisible lg:visible;
             }
 
             & > .carouselGradient {
@@ -44,7 +44,7 @@
                 }
                 
                 & > .carouselImageText {
-                    @apply text-white right-24 md:right-10 bottom-2 md:bottom-10 absolute text-xl;
+                    @apply text-white right-20 lg:right-10 bottom-1 lg:bottom-10 absolute text-xl;
                 }
                 
 

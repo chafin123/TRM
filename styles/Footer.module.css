@@ -1,26 +1,49 @@
 .footerContainer {
-    @apply flex flex-col md:flex-row relative lg:justify-between w-full text-white px-5 md:px-10 lg:px-44 lg:py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
-    
-    & > div {
+    @apply w-full;
 
+    & > .largeFoot {
+        @apply hidden lg:flex flex-col md:flex-row relative lg:justify-between w-full text-white px-5 md:px-10 lg:px-24 lg:py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
+        
+        
+        
+        & > div {
+            
         & > h3 {
             @apply text-2xl font-semibold tracking-widest pb-3;
         }
-
+        
         & > p {
             @apply text-xs;
         }
     }    
     
-    & > .logoContainer {
-        @apply lg:border-r-4 border-white lg:pr-20 self-center md:pt-4 h-fit;
-    }
-
-    & > .contact {
-
-        & > .iconContainer{
-            @apply pt-5 justify-between flex flex-row w-4/5;
+        & > .logoContainer {
+            @apply lg:border-r-4 border-white lg:pr-20 self-center md:pt-4 h-fit;
         }
+        
+        & > .contact {
+            
+            & > .iconContainer{
+                @apply pt-5 justify-between flex flex-row w-4/5;
+            }
+        }
+        
     }
+    & > .accordionContainer {
+        @apply border-b-0 lg:hidden;
+        
+        & > .accordion {
 
+            & > button {
+                @apply border-none font-nova-sans text-white text-2xl font-semibold tracking-widest px-5;
+            }
+        }
+        .accordionBody {
+           @apply px-5  text-white font-nova-sans text-xs md:text-center;
+
+           & > .accordionIconContainer {
+            @apply flex flex-row justify-between pt-5 w-2/5 mx-auto;
+           }
+       }
+    }
 }

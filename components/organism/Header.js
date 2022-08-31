@@ -4,10 +4,10 @@ import Info from "../molecules/Info";
 import Navigation from "../molecules/Navigation";
 import styles from "../../styles/Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className={styles.header}>
-            <Navigation className={styles.navigation} />
+            <Navigation className={styles.navigation} href={props.href}/>
             <div className={styles.logo}>
 
                 <Image 
