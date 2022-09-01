@@ -5,10 +5,10 @@
         @apply lg:w-4/12 order-2;
     } 
     & > .welcomeBlock {
-        @apply order-1 lg:order-2 bg-[#B12A1B] w-full relative flex flex-row bg-[url('/images/bg-images/welcome-bg-waves.png')] bg-opacity-95;
+        @apply order-1 lg:order-2 bg-[#B12A1B] w-full relative flex flex-row bg-[url('/images/bg-images/welcome-bg-waves.png')];
         
         & > .textBlock {
-            @apply lg:w-2/5 py-20 px-5 lg:pl-24 text-white mx-6;
+            @apply lg:w-full max-w-[600px] py-20 px-5 lg:pl-24 text-white mx-6;
 
             & > h2 {
                 @apply text-2xl tracking-[5px] font-nova-sans font-bold;

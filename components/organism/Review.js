@@ -2,7 +2,6 @@ import Image from "next/image"
 import styles from '../../styles/Review.module.css'
 import data from '../atoms/Reviews.json'
 import { useState, useEffect } from 'react'
-import classNames from "classnames"
 const Review = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +32,7 @@ const Review = () => {
                         width={170}
                     />
                 </div>
-                    <div className={classNames(styles.reviewText)}>
+                    <div className={styles.reviewText} id={data.reviews[currentIndex].id}>
                         <p className={styles.text}>{`"${data.reviews[currentIndex].text}"`}</p>
                         <p className={styles.author}>-{data.reviews[currentIndex].author}</p>
                     </div>

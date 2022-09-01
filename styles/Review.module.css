@@ -17,7 +17,7 @@
             }
         }
         & > .reviewText {
-            @apply flex flex-col;
+            @apply flex flex-col animate-fade;
 
             & > .author {
                 @apply place-self-end text-sm text-white font-nova-sans;
