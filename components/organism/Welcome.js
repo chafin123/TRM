@@ -6,7 +6,7 @@ const Welcome = (props) => {
         <div className={styles.container}>
             <div className={styles.welcomePictureContainer}>
                 <Image 
-                    src="/images/welcome.jpg"
+                    src="/images/welcomeImage.jpg"
                     alt="The chef owners welcoming you in"
                     layout="responsive"
                     height={300}
