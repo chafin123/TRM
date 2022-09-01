@@ -39,7 +39,7 @@ const Review = () => {
             </div>
             <div className={styles.sushiContainer}>
                 <Image 
-                    src='/images/sushi.png'
+                    src='/images/sushi-roll.png'
                     alt="sushi"
                     height={400}
                     width={100}
