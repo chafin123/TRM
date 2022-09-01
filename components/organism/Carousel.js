@@ -1,14 +1,13 @@
 import Image from "next/dist/client/image"
 import data from '../atoms/Image.json'
 import styles from '../../styles/Carousel.module.css'
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 
 const Carousel = () => {
     
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const carousel = useRef(null);
     
     const movePrev = () => {
         currentIndex <= 0 ? setCurrentIndex(7) : setCurrentIndex((prevState) => prevState -1)
@@ -16,7 +15,6 @@ const Carousel = () => {
 
     const moveNext = () => {
         currentIndex >= 7 ? setCurrentIndex(0) : setCurrentIndex((prevState) => prevState + 1) 
-        console.log( currentIndex)
     }
 
       
@@ -60,7 +58,6 @@ const Carousel = () => {
                     </button>
                 </div>
                 <div
-                    ref={carousel}
                     className={styles.carouselContainer}
                 >
                     {data.imageArray.map((image, index) => {

@@ -2,7 +2,7 @@
     @apply flex flex-col lg:flex-row justify-center items-center lg:justify-between w-full py-4 bg-gradient-to-r from-black/[0.6] to-black/[0.4] md:order-1;
   
     & > .navigation {
-        @apply text-white lg:px-12 pt-10 flex lg:pr-40 order-2 lg:order-1;
+        @apply text-white lg:px-12 pt-10 flex pr-3 lg:pr-40 order-2 lg:order-1 lg:pb-8;
     
         & > a {
             @apply pl-4 my-1 tracking-widest text-sm;

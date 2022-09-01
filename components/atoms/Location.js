@@ -14,7 +14,7 @@ const Location = (props) => {
             </div>
             <div>
                 <a href="https://g.page/BasilGinger?share?">
-                    <p>850 s Roberts St.Suite 100</p>
+                    <p>850 S Roberts St.Suite 100</p>
                     <p>Wasilla,Alaska,99654</p>
                 </a>
             </div>

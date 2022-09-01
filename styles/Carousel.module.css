@@ -44,7 +44,7 @@
                 }
                 
                 & > .carouselImageText {
-                    @apply text-white right-20 lg:right-10 bottom-1 lg:bottom-10 absolute text-xl;
+                    @apply text-white right-28 md:right-80 md:bottom-4  lg:right-10 bottom-1 lg:bottom-10 absolute text-xl;
                 }
                 
 

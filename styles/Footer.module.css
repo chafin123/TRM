@@ -2,7 +2,7 @@
     @apply w-full;
 
     & > .largeFoot {
-        @apply hidden lg:flex flex-col md:flex-row relative lg:justify-between w-full text-white px-5 md:px-10 lg:px-24 lg:py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
+        @apply hidden lg:flex flex-row relative justify-between w-full text-white px-48 py-20 bg-gradient-to-r from-black/[0.08] to-black/[0.5];
         
         
         
@@ -22,7 +22,7 @@
         }
         
         & > .contact {
-            
+            @apply pr-12;
             & > .iconContainer{
                 @apply pt-5 justify-between flex flex-row w-4/5;
             }

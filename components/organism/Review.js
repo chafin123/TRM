@@ -1,7 +1,17 @@
 import Image from "next/image"
 import styles from '../../styles/Review.module.css'
 import data from '../atoms/Reviews.json'
+import { useState, useEffect } from 'react'
+import classNames from "classnames"
 const Review = () => {
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => currentIndex >= data.reviews.length -1 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1), 10000);
+        return () => clearInterval(interval)
+    });
+
     return (
         <div className={styles.reviewContainer}>
             <div className={styles.bowlContainer}>
@@ -22,11 +32,11 @@ const Review = () => {
                         height={30}
                         width={170}
                     />
-                </div>    
-                <div className={styles.reviewText}>
-                    <p className={styles.text}>{`"${data.reviews[0].text}"`}</p>
-                    <p className={styles.author}>-{data.reviews[0].author}</p>
                 </div>
+                    <div className={classNames(styles.reviewText)}>
+                        <p className={styles.text}>{`"${data.reviews[currentIndex].text}"`}</p>
+                        <p className={styles.author}>-{data.reviews[currentIndex].author}</p>
+                    </div>
             </div>
             <div className={styles.sushiContainer}>
                 <Image 
