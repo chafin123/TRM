@@ -32,10 +32,14 @@ const Review = () => {
                         width={170}
                     />
                 </div>
-                    <div className={styles.reviewText} id={data.reviews[currentIndex].id}>
-                        <p className={styles.text}>{`"${data.reviews[currentIndex].text}"`}</p>
-                        <p className={styles.author}>-{data.reviews[currentIndex].author}</p>
-                    </div>
+                    {data.reviews.map(review => {
+                        return (
+                        <div className={review.id == currentIndex ? styles.reviewText : "hidden"} id={data.reviews[currentIndex].id} key={review.id}>
+                            <p className={styles.text}>{`"${review.text}"`}</p>
+                            <p className={styles.author}>-{review.author}</p>
+                        </div>
+                        )
+                    })}    
             </div>
             <div className={styles.sushiContainer}>
                 <Image 

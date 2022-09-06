@@ -61,11 +61,10 @@ const Carousel = () => {
                     className={styles.carouselContainer}
                 >
                     {data.imageArray.map((image, index) => {
-                        if (index === currentIndex) {    
                             return (
                                 <div
                                     key={index}
-                                    className={styles.carouselItem}
+                                    className={index == currentIndex ? styles.carouselItem : styles.hide}
                                 >
                                     <Image 
                                         src={image.src}
@@ -82,7 +81,6 @@ const Carousel = () => {
                                     </h3>
                                 </div>
                             )
-                        }
                     })}
                 </div>
 
