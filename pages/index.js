@@ -14,7 +14,6 @@ export default function Home() {
       <Head>
         <title>Basil Ginger</title>
         <meta name="description" content="Basil Ginger" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/vbe1upt.css"></link>
       </Head>
       <Header href='#bop'/>
