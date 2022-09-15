@@ -1,5 +1,7 @@
 import styles from '../../styles/Drinks.module.css'
 import { groupBy } from 'lodash'
+import { Accordion, AccordionBody, AccordionHeader } from '@material-tailwind/react';
+import { useState } from 'react';
 import Wine from '../atoms/Wine.js'
 const Drinks = (props) => {
     const beerGroup = groupBy(props.props["Beer"], "thirdCategory");
@@ -9,11 +11,17 @@ const Drinks = (props) => {
     const redWineGroup = props.props["Red Wine"];
     const houseWineGroup = props.props["House Wine"];
     const sakeGroup = props.props["Sake"]
+
+    const [open, setOpen] = useState(0);
+ 
+    const handleOpen = (value) => {
+        setOpen(open === value ? 0 : value);
+    };
     return (
                 <div className={styles.drinkContainer}>
-                    <div className={styles.accordionGroup}>
-                        <h2 className={styles.accordionHeader}>Sake</h2>
-                        <div className={styles.accordionBody}>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 1} onClick={() => handleOpen(1)}>
+                        <AccordionHeader className={styles.accordionHeader}><p>Sake</p></AccordionHeader>
+                       <AccordionBody class={styles.accordionBody}>
                             {sakeGroup.map((menuItem, index) => {
                                 return (
                                     <div key={index}>
@@ -53,54 +61,85 @@ const Drinks = (props) => {
                                     </div>
                                 )
                             })}
-                        </div>
-                    </div>
-                    <Wine props={wineCocktailsGroup} className={styles}/>
-                    <Wine props={whiteWineGroup} className={styles}/>
-                    <Wine props={redWineGroup} className={styles}/>
-                    <Wine props={houseWineGroup} className={styles}/>
-                    <div className={styles.accordionGroup}>
-                        <h2>Beer</h2>
-                        <div className={styles.accordionBody}>
-                            <h3>Draft Beer <span className={styles.priceNumber}>7</span></h3>
-                                <div>    
-                                    {beerGroup["Draft Beer"].map((beer, index) => {
-                                        return (
-                                            <p key={index} className={styles.accordionItem}>{beer.item}</p>
-                                        )
-                                    })}
+                        </AccordionBody>
+                </Accordion>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 2} onClick={() => handleOpen(2)}>
+                    <AccordionHeader className={styles.accordionHeader}><p>Magarita Wine-Cocktail</p></AccordionHeader>
+                        <AccordionBody>    
+                            <Wine props={wineCocktailsGroup} className={styles}/>
+                        </AccordionBody>
+                </Accordion>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 3} onClick={() => handleOpen(3)}>
+                    <AccordionHeader className={styles.accordionHeader}><p>White Wine</p></AccordionHeader>
+                        <AccordionBody>    
+                            <Wine props={whiteWineGroup} className={styles}/>
+                        </AccordionBody>
+                </Accordion>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 4} onClick={() => handleOpen(4)}>
+                    <AccordionHeader className={styles.accordionHeader}><p>Red Wine</p></AccordionHeader>
+                        <AccordionBody>    
+                            <Wine props={redWineGroup} className={styles}/>
+                        </AccordionBody>
+                </Accordion>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 5} onClick={() => handleOpen(5)}>
+                    <AccordionHeader className={styles.accordionHeader}><p>House Wine</p></AccordionHeader>
+                        <AccordionBody>    
+                        <Wine props={houseWineGroup} className={styles}/>
+                        </AccordionBody>
+                </Accordion>
+                <Accordion icon={false} className={styles.accordionGroup} open={open === 6} onClick={() => handleOpen(6)}>
+                <AccordionHeader className={styles.accordionHeader}><p>Beer</p></AccordionHeader>
+                        <AccordionBody className={styles.accordionBody}>
+                                <div className={styles.accordionItemContainer} id={styles.beer}>    
+                                    <div className={styles.draftBeerContainer}>    
+                                        <h3>Draft Beer <span className={styles.priceNumber}>7</span></h3>
+                                            <div className={styles.draftBeerItemContainer}>    
+                                                {beerGroup["Draft Beer"].map((beer, index) => {
+                                                    return (
+                                                        <p key={index} className={styles.accordionItem}>{beer.item}</p>
+                                                    )
+                                                })}
+                                            </div>
+                                    </div>
+                                    <div className={styles.bottleBeerContainer}>
+                                        <h3>Bottle Beer <span className={styles.priceNumber}>7</span></h3>
+                                            <div className={styles.bottleBeerItemContainer}>
+                                                {beerGroup["Bottle Beer"].map((beer, index) => {
+                                                    return (
+                                                        <p key={index} className={styles.accordionItem}>{beer.item}</p>
+                                                    )
+                                                })}
+                                            </div>
+                                    </div>
                                 </div>
-                            <h3>Bottle Beer <span className={styles.priceNumber}>7</span></h3>
-                                <div>
-                                    {beerGroup["Bottle Beer"].map((beer, index) => {
-                                        return (
-                                            <p key={index} className={styles.accordionItem}>{beer.item}</p>
-                                        )
-                                    })}
+                        </AccordionBody>
+                    </Accordion>
+                    <Accordion icon={false} className={styles.accordionGroup} open={open === 7} onClick={() => handleOpen(7)}>
+                        <AccordionHeader className={styles.accordionHeader}><p>Non-Acholic Beverages</p></AccordionHeader>
+                        <AccordionBody className={styles.accordionBody}>    
+                            <div className={styles.accordionItemContainer} id={styles.nonAcholicBevarages}>
+                                <div className={styles.softDrinksContainer}>
+                                    <h2>Soft Drinks <span className={styles.priceNumber}>3</span></h2>
+                                        {nonAlcholicGroup["Soft Drinks"].map((drink, index) => {
+                                            return (
+                                                <p key={index} className={styles.accordionItem}>{drink.item}</p>
+                                            )
+                                        })}
                                 </div>
-                        </div>
-                    </div>
-                    <div className={styles.accordionGroup}>
-                        <h2>Soft Drinks <span className={styles.priceNumber}>3</span></h2>
-                        <div className={styles.accordionBody}>    
-                            <div>
-                                {nonAlcholicGroup["Soft Drinks"].map((drink, index) => {
-                                    return (
-                                        <p key={index} className={styles.accordionItem}>{drink.item}</p>
-                                    )
-                                })}
+                                <div className={styles.hotTeaContainer}>
+                                    <h2>Hot Tea <span className={styles.priceNumber}>6</span></h2>
+                                        {nonAlcholicGroup["Hot Tea"].map((tea, index) => {
+                                            return (
+                                                <p key={index} className={styles.accordionItem}>{tea.item}</p>
+                                            )
+                                        })}
+                                </div>
+                                <div className={styles.thaiTeaContainer}>
+                                    <h2>Thai Tea <span className={styles.priceNumber}>{nonAlcholicGroup["Thai Tea"][0].price1}</span></h2>
+                                </div>
                             </div>
-                            <h2>Hot Tea <span className={styles.priceNumber}>6</span></h2>
-                            <div>
-                                {nonAlcholicGroup["Hot Tea"].map((tea, index) => {
-                                    return (
-                                        <p key={index} className={styles.accordionItem}>{tea.item}</p>
-                                    )
-                                })}
-                            </div>
-                            <h2>Thai Tea <span className={styles.priceNumber}>{nonAlcholicGroup["Thai Tea"][0].price1}</span></h2>
-                            </div>
-                        </div>
+                        </AccordionBody>
+                    </Accordion>
                 </div>
     )
 }

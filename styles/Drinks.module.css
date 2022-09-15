@@ -1,14 +1,21 @@
 .drinkContainer {
 }
 .accordionGroup {
-    @apply text-white mx-auto w-1/2 text-center text-2xl py-4 my-6 text-start;
-    & > h2 {
-        @apply border border-[#7C7257];
+    @apply text-white mx-auto w-7/12 text-2xl my-3;
+    & > button {
+        @apply border border-[#7C7257] py-1 bg-gradient-to-r from-black/[0.5] to-black/[0.5];
+        
+    }
+    & > .accordionHeader {
+        @apply text-white ;
+        & > p {
+            @apply mx-auto;
+        }
     }
     & > .accordionBody {
-        @apply flex-wrap flex-row w-5/6 ;
+        @apply flex-wrap flex-row w-5/6 hidden text-start text-white;
         & > .accordionItemContainer {
-            @apply flex flex-row ;
+            @apply flex flex-row;
         }
     }
 }
@@ -24,9 +31,18 @@
 .priceNumber {
     @apply text-[#7C7257]
 }
-.accordionHeader {
-    @apply place-self-start;
-}
 .accordionItemContainer {
-    @apply my-8;
+    @apply my-8 text-white flex flex-col;
+}
+#beer {
+    @apply flex-col;
+}
+.bottleBeerContainer {
+    @apply pl-2;
+}
+.bottleBeerItemContainer {
+    @apply flex flex-row;
+    & > p {
+        @apply pl-1
+    }
 }
