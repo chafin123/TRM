@@ -1,5 +1,5 @@
 import Image from "next/dist/client/image"
-import data from '../atoms/Image.json'
+import data from '../../shared/Image.json'
 import styles from '../../styles/Carousel.module.css'
 import { useState } from "react"
 

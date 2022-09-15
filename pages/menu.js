@@ -1,22 +1,22 @@
-import Head from "next/head"
 import styles from '../styles/Menu.module.css'
-const Menu = () => {
+import Drinks from './../components/molecules/Drinks';
+import grouper from '../components/atoms/tempGroup';
 
-    
+export default function Menu({ data }) {
+    // console.log(data)
+
     return (
-    <>
-        <Head>
-            <title>Basil Ginger</title>
-            <meta name="description" content="Basil Ginger" />
-            <link rel="stylesheet" href="https://use.typekit.net/vbe1upt.css"></link>
-        </Head>
-        <main>
-            <div className={styles.Accordion}>
-
-            </div>
-        </main>
-    </>    
+    <div>
+        <Drinks props={data}/>        
+    </div>    
     )
 }
+export async function getStaticProps() {
+    const data = grouper();
 
-export default Menu;
+    return {
+        props: {
+            data,
+        },
+    }
+}

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import styles from '../../styles/Review.module.css'
-import data from '../atoms/Reviews.json'
+import data from '../../shared/Reviews.json'
 import { useState, useEffect } from 'react'
 const Review = () => {
 
