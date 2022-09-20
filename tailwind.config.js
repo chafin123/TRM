@@ -5,6 +5,7 @@ module.exports = withMT({
   content: [
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
     extend: {
@@ -26,5 +27,7 @@ module.exports = withMT({
       }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 });

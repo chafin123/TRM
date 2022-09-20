@@ -1,18 +1,17 @@
-.drinkContainer {
-
-}
-.accordionGroup {
-    @apply text-white mx-auto w-5/12 text-2xl my-3;
-    & > button {
-        @apply border border-[#7C7257] py-1 bg-gradient-to-r from-black/20 to-black/20;
-        
+.accordion {
+    @apply text-white mx-auto w-full my-3;
+    & > .subHeader {
+        @apply text-lg mb-1;
     }
-    & > .accordionHeader {
-        @apply text-white ;
+    & .accordionHeader{
+        @apply p-1;
+    & > button {
+            @apply border border-[#7C7257] py-1 bg-gradient-to-r from-black/20 to-black/20 w-full;
+        }
         & > h2 {
             @apply mx-auto text-lg font-nova-sans font-light tracking-wider;
         }
-    }
+        }
     & > .accordionBody {
         @apply flex-wrap flex-row w-5/6 text-start text-white;
         & > .accordionItemContainer {
@@ -52,3 +51,12 @@
         }
     }
 }
+.accordionPriceContainer {
+        @apply flex w-fit;
+        & > p {
+            @apply pr-2 text-base;
+        }
+        & > p:not(:first-child) {
+            @apply border-l pl-2;
+        }
+    }
