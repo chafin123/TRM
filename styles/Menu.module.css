@@ -1,0 +1,19 @@
+.menuContainer {
+    @apply  w-5/12 mx-auto pt-24;
+    & > .menuEntry {
+        @apply w-full;
+    }
+    & > .menuHeader {
+        @apply w-full flex flex-row justify-between pb-6;
+        & > .logoContainer {
+            
+        }
+        & > .buttonContainer {
+        @apply border-2 border-[#7C7257] h-fit p-2 self-center rounded-lg;
+                
+                & > button > p {
+                    @apply tracking-widest text-[#7C7257] text-xs;
+                }    
+        }
+    }
+}

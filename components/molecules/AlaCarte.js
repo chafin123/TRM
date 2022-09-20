@@ -1,7 +1,8 @@
+import { groupBy } from "lodash"
 import styles from '../../styles/AlaCarte.module.css'
 
 
-const Dessert = (props) => {
+const AlaCarte = (props) => {
     return (
 
     <div className={props.className}>
@@ -14,14 +15,14 @@ const Dessert = (props) => {
                 className={` hs-accordion-toggle `}
                 aria-controls="hs-basic-nested-collapse-one"
             >
-                <h2>DESSERT</h2>
+                <h2>A-LA CARTE</h2>
             </button>
             <div
                 id="hs-basic-nested-collapse-one"
                 className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
                 aria-labelledby="hs-basic-nested-heading-one"
             >
-                {props.props["Dessert"].map((menuItem, index) => {
+                {groupBy(props.props["Sushi"], "subcategory")["A-La Carte"].map((menuItem, index) => {
                     if(menuItem.active)return (
                         <div
                             className={styles.accordionItemContainer}
@@ -43,4 +44,4 @@ const Dessert = (props) => {
     )
 }
 
-export default Dessert
+export default AlaCarte

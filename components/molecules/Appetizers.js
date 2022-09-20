@@ -3,7 +3,7 @@ import { groupBy } from "lodash";
 
 const Appetizers = (props) => {
   return (
-    <div className="w-6/12 mx-auto">
+    <div className={props.className}>
       <div className={`${styles.accordion} hs-accordion-group`}>
         <div
           className={`${styles.accordionHeader} text-xl hs-accordion active`}

@@ -4,8 +4,8 @@ import Specials from './../atoms/Specials';
 
 const Entrees = (props) => {
     return (
-<div className="w-6/12 mx-auto">
-      <div className={`${styles.accordion} hs-accordion-group`}>
+<div className={props.className}>
+      <div className={`${styles.accordion} hs-accordion-group hs-collapse-close`}>
         <div
           className={`${styles.accordionHeader} text-xl hs-accordion active`}
           id="hs-basic-nested-heading-one"
@@ -14,7 +14,7 @@ const Entrees = (props) => {
             className={` hs-accordion-toggle `}
             aria-controls="hs-basic-nested-collapse-one"
           >
-            <h2>Entrees</h2>
+            <h2>ENTREES</h2>
           </button>
           <div
             id="hs-basic-nested-collapse-one"

@@ -5,7 +5,7 @@ const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
 
  
   return (
-    <div className="w-6/12 mx-auto">
+    <div className={props.className}>
         <div 
             className={`${styles.accordion} hs-accordion-group`}>
         <div
