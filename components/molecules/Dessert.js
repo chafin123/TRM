@@ -1,45 +1,47 @@
-import styles from '../../styles/AlaCarte.module.css'
-
+import styles from '../../styles/MenuItems.module.css'
+import {
+    Accordion,
+    AccordionBody,
+    AccordionHeader,
+    AccordionItem,
+} from 'reactstrap';
+import { useState } from 'react';
 
 const Dessert = (props) => {
+    const [open, setOpen] = useState('');
+    const toggle = (id) => {
+        if (open === id) {
+            setOpen();
+        } else {
+            setOpen(id);
+        }
+    };
     return (
 
-    <div className={props.className}>
-        <div className={`${styles.accordion} hs-accordion-group`}>
-            <div
-            className={`${styles.accordionHeader} text-xl hs-accordion active`}
-            id="hs-basic-nested-heading-one"
-            >
-            <button
-                className={` hs-accordion-toggle `}
-                aria-controls="hs-basic-nested-collapse-one"
-            >
-                <h2>DESSERT</h2>
-            </button>
-            <div
-                id="hs-basic-nested-collapse-one"
-                className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="hs-basic-nested-heading-one"
-            >
-                {props.props["Dessert"].map((menuItem, index) => {
-                    if(menuItem.active)return (
-                        <div
-                            className={styles.accordionItemContainer}
-                            key={index}
-                        >
-                            <p>{menuItem.item.toUpperCase()} {menuItem.modifier ? " !" : ""} <span  className={styles.priceNumber}>{menuItem.price1}</span></p>
-                            {menuItem.description ? 
-                            <p>{menuItem.description}</p>
-                            :
-                            ""
-                            }
-                        </div>
-                    )
-                })}
-                </div>
-            </div>
+        <div className={props.className}>
+            <Accordion open={open} toggle={toggle} cssModule={styles} className={styles.accordion}>
+                <AccordionItem cssModule={styles}>
+                    <AccordionHeader cssModule={styles} className={styles.accordionHeader} targetId='1'>DESSERT</AccordionHeader>
+                    <AccordionBody cssModule={styles} className={styles.accordionBody} accordionId='1'>
+                        {props.props["Dessert"].map((menuItem, index) => {
+                            if (menuItem.active) return (
+                                <div
+                                    className={styles.accordionItemContainer}
+                                    key={index}
+                                >
+                                    <p>{menuItem.item.toUpperCase()} {menuItem.modifier ? <Spicy /> : ""} <span className={styles.priceNumber}>{menuItem.price1}</span></p>
+                                    {menuItem.description ?
+                                        <p className={styles.itemDescription}>{menuItem.description}</p>
+                                        :
+                                        ""
+                                    }
+                                </div>
+                            )
+                        })}
+                    </AccordionBody>
+                </AccordionItem>
+            </Accordion>
         </div>
-    </div>
     )
 }
 

@@ -4,7 +4,7 @@
         "description": "",
         "price1": 8,
         "price2": 16,
-        "price3": 18,
+        "price3": 40,
         "price4": "",
         "price5": "",
         "price6": "",
@@ -120,7 +120,7 @@
         "id": 9
     },
     {
-        "item": "Gekkeikan Plum Wine",
+        "item": "*Gekkeikan Plum Wine",
         "description": "",
         "price1": 9,
         "price2": "",
@@ -135,7 +135,7 @@
         "id": 10
     },
     {
-        "item": "Hana Peach",
+        "item": "*Hana Peach",
         "description": "",
         "price1": 8,
         "price2": 16,

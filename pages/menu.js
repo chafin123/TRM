@@ -4,7 +4,6 @@ import Appetizers from './../components/molecules/Appetizers';
 import Entrees from '../components/molecules/Entrees';
 import grouper from '../components/atoms/tempGroup';
 import Sushi from '../components/molecules/Sushi';
-import AlaCarte from '../components/molecules/AlaCarte';
 import Dessert from './../components/molecules/Dessert';
 import Image from "next/dist/client/image"
 
@@ -29,7 +28,6 @@ export default function Menu({ data }) {
         <Appetizers props={data} className={styles.menuEntry}/>
         <Entrees props={data} className={styles.menuEntry}/>
         <Sushi props={data} className={styles.menuEntry}/>
-        <AlaCarte props={data} className={styles.menuEntry}/>
         <Dessert props={data} className={styles.menuEntry}/>
     </div>    
     )

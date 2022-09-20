@@ -1,0 +1,56 @@
+.accordion {
+    @apply text-white mx-auto w-full my-3;
+    & > .subHeader {
+        @apply text-lg mb-1;
+    }
+    & > .accordionBody {
+        @apply pl-5;
+    }
+        }
+.accordionItemContainer {
+@apply pt-8 pb-0 text-white flex flex-col text-start text-lg;
+    & > .accordionPriceContainer {
+        @apply flex w-fit flex-wrap;
+        & > p {
+            @apply mr-2 text-base w-fit flex flex-nowrap tracking-widest m-0;
+        }
+        & > p:not(:last-child) {
+            @apply border-r;
+        }
+        & > p:not(:first-child) {
+            @apply pl-1;
+        }
+        & > p:last-child {
+            @apply pl-0;
+        }
+    }
+}
+.priceNumber {
+    @apply text-[#7C7257] text-base font-bold px-1;
+}
+
+.listContainer {
+    @apply pl-2 ;
+    & > .header {
+        @apply flex text-xl;
+    }
+
+    & > ul {
+        @apply flex flex-wrap justify-between w-full pb-6;
+        & > li {
+            @apply pb-0.5 w-1/2 text-base tracking-wider;
+        }
+    }
+}
+.accordion-header {
+    @apply text-center border border-[#7C7257] bg-gradient-to-r from-black/20 to-black/20 w-full h-fit;
+    & > .accordion-button {
+        @apply h-fit text-xl font-nova-sans font-light tracking-wider py-3;   
+    }
+}
+.accordion-button:focus(::after)  {
+    @apply opacity-25;
+}
+.itemDescription{
+    @apply text-sm tracking-wider;
+}
