@@ -1,4 +1,3 @@
-import styles from "../../styles/MenuItems.module.css";
 import { groupBy } from "lodash";
 import Wine from "../atoms/Wine.js";
 import {
@@ -9,16 +8,7 @@ import {
 } from 'reactstrap';
 import { useState } from 'react'
 const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
-    const [open, setOpen] = useState('');
     const [nestOpen, setNestOpen] = useState('');
-
-    const toggle = (id) => {
-        if (open === id) {
-            setOpen();
-        } else {
-            setOpen(id);
-        }
-    };
     const nestToggle = (id) => {
         if (nestOpen === id) {
             setNestOpen();
@@ -28,81 +18,77 @@ const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
     };
 
     return (
-        <div className={props.className}>
-            <Accordion open={open} toggle={toggle} cssModule={styles} className={styles.accordion}>
-                <AccordionItem cssModule={styles}>
-                    <AccordionHeader cssModule={styles} className={styles.accordionHeader} targetId='1'>DRINKS</AccordionHeader>
-                    <AccordionBody cssModule={styles} accordionId='1'>
-                        <Accordion flush open={nestOpen} toggle={nestToggle} cssModule={styles} className={styles.accordion}>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='1' cssModule={styles} className={styles.accordion}>SAKE</AccordionHeader>
-                                <AccordionBody accordionId='1' cssModule={styles} className={styles.accordionBody}>
+        <div className={props.className.menuEntry}>
+                        <Accordion flush open={nestOpen} toggle={nestToggle} cssModule={props.moduleChange} className={props.className.accordion} >
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='1' cssModule={props.className} className={props.className.accordion}>SAKE</AccordionHeader>
+                                <AccordionBody accordionId='1' cssModule={props.className} className={props.className.accordionBody}>
                                     <p className="text-white text-base">*Served Cold</p>
                                     {groupBy(props.props["Drinks"], "subcategory")["Sake"].map(
                                         (menuItem, index) => {
                                             if(menuItem.active)return (
                                                 <div key={index}>
                                                     {menuItem.item == "Hana Peach" ? (
-                                                        <div className={styles.accordionItemContainer}>
+                                                        <div className={props.className.accordionItemContainer}>
                                                             <p>{menuItem.item.toUpperCase()}</p>
-                                                            <div className={styles.accordionPriceContainer}>
-                                                                <p className={styles.accordionItemPrice}>
+                                                            <div className={props.className.accordionPriceContainer}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     SMALL{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price1}
                                                                     </span>
                                                                 </p>
-                                                                <p className={styles.accordionItemPrice}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     LARGE{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price2}
                                                                     </span>
                                                                 </p>
-                                                                <p className={styles.accordionItemPrice}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     SMALL BOTTLE{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price3}
                                                                     </span>
                                                                 </p>
-                                                                <p className={styles.accordionItemPrice}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     LARGE BOTTLE{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price4}
                                                                     </span>
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     ) : (
-                                                        <div className={styles.accordionItemContainer}>
+                                                        <div className={props.className.accordionItemContainer}>
                                                             {menuItem.modifier ? (
-                                                                <p className={styles.accordionItem}>
+                                                                <p className={props.className.accordionItem}>
                                                                     {menuItem.item.toUpperCase()}
                                                                 </p>
                                                             ) : (
-                                                                <p className={styles.accordionItem}>
+                                                                <p className={props.className.accordionItem}>
                                                                     {menuItem.item.toUpperCase()}
                                                                 </p>
                                                             )}
-                                                            <div className={styles.accordionPriceContainer}>
-                                                                <p className={styles.accordionItemPrice}>
+                                                            <div className={props.className.accordionPriceContainer}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     SMALL{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price1}
                                                                     </span>
                                                                 </p>
                                                                 {menuItem.price2 ? (
-                                                                    <p className={styles.accordionItemPrice}>
+                                                                    <p className={props.className.accordionItemPrice}>
                                                                         LARGE{" "}
-                                                                        <span className={styles.priceNumber}>
+                                                                        <span className={props.className.priceNumber}>
                                                                             {menuItem.price2}
                                                                         </span>
                                                                     </p>
                                                                 ) : (
                                                                     <></>
                                                                 )}
-                                                                <p className={styles.accordionItemPrice}>
+                                                                <p className={props.className.accordionItemPrice}>
                                                                     BOTTLE{" "}
-                                                                    <span className={styles.priceNumber}>
+                                                                    <span className={props.className.priceNumber}>
                                                                         {menuItem.price3}
                                                                     </span>
                                                                 </p>
@@ -115,61 +101,63 @@ const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
                                     )}
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='2' cssModule={styles} className={styles.accordionHeader}>MAGARITA WINE-COCKTAIL</AccordionHeader>
-                                <AccordionBody accordionId='2' cssModule={styles} className={styles.accordionBody}>
-                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["Magarita Wine-Cocktail"]} className={styles} />
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='2' cssModule={props.className} className={props.className.accordionHeader}>MAGARITA WINE-COCKTAIL</AccordionHeader>
+                                <AccordionBody accordionId='2' cssModule={props.className} className={props.className.accordionBody}>
+                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["Magarita Wine-Cocktail"]} className={props.className} />
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='3' cssModule={styles} className={styles.accordionHeader}>WHITE WINE</AccordionHeader>
-                                <AccordionBody accordionId='3' cssModule={styles} className={styles.accordionBody}>
-                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["White Wine"]} className={styles} />
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='3' cssModule={props.className} className={props.className.accordionHeader}>WHITE WINE</AccordionHeader>
+                                <AccordionBody accordionId='3' cssModule={props.className} className={props.className.accordionBody}>
+                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["White Wine"]} className={props.className} />
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='4' cssModule={styles} className={styles.accordionHeader}>RED WINE</AccordionHeader>
-                                <AccordionBody accordionId='4' cssModule={styles} className={styles.accordionBody}>
-                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["Red Wine"]} className={styles} />
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='4' cssModule={props.className} className={props.className.accordionHeader}>RED WINE</AccordionHeader>
+                                <AccordionBody accordionId='4' cssModule={props.className} className={props.className.accordionBody}>
+                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["Red Wine"]} className={props.className} />
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='5' cssModule={styles} className={styles.accordionHeader}>HOUSE WINE</AccordionHeader>
-                                <AccordionBody accordionId='5' cssModule={styles} className={styles.accordionBody}>
-                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["House Wine"]} className={styles} />
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='5' cssModule={props.className} className={props.className.accordionHeader}>HOUSE WINE</AccordionHeader>
+                                <AccordionBody accordionId='5' cssModule={props.className} className={props.className.accordionBody}>
+                                    <Wine props={groupBy(props.props["Drinks"], "subcategory")["House Wine"]} className={props.className} />
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='6' cssModule={styles} className={styles.accordionHeader}>BEER</AccordionHeader>
-                                <AccordionBody accordionId='6' cssModule={styles} className={styles.accordionBody}>
-                                    <div className={styles.listContainer}>
-                                        <div className={styles.header}>
-                                            <h3 className="pt-6">
-                                                DRAFT BEER <span className={styles.priceNumber}>7</span>
-                                            </h3>
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='6' cssModule={props.className} className={props.className.accordionHeader}>BEER</AccordionHeader>
+                                <AccordionBody accordionId='6' cssModule={props.className} className={props.className.accordionBody}>
+                                    <div className={props.className.listContainer}>
+                                        <div className={props.className.header}>
+                                            <p className="pt-6">
+                                                DRAFT BEER <span className={props.className.priceNumber}>{groupBy(groupBy(props.props["Drinks"], "subcategory")["Beer"],
+                                            "thirdCategory")["Draft Beer"][0].price1}</span>
+                                            </p>
                                         </div>
                                         <ul>
                                             {groupBy(groupBy(props.props["Drinks"], "subcategory")["Beer"],
                                             "thirdCategory")["Draft Beer"].map((menuItem, index) => {
                                                 if(menuItem.active)return (
-                                                    <li key={index} className={styles.accordionItem}>
+                                                    <li key={index} className={props.className.accordionItem}>
                                                         {menuItem.item}
                                                     </li>
                                                 );
                                             })}
                                         </ul>
                                     </div>
-                                    <div className={styles.listContainer}>
-                                        <div className={styles.header}>
-                                            <h3>
-                                                BOTTLE BEER <span className={styles.priceNumber}>7</span>
-                                            </h3>
+                                    <div className={props.className.listContainer}>
+                                        <div className={props.className.header}>
+                                            <p>
+                                                BOTTLE BEER <span className={props.className.priceNumber}>{groupBy(groupBy(props.props["Drinks"], "subcategory")["Beer"],
+                                            "thirdCategory")["Bottle Beer"][0].price1}</span>
+                                            </p>
                                         </div>
                                         <ul>
                                             {groupBy(groupBy(props.props["Drinks"], "subcategory")["Beer"],
                                             "thirdCategory")["Bottle Beer"].map((menuItem, index) => {
                                                 if(menuItem.active)return (
-                                                    <li key={index} className={styles.accordionItem}>
+                                                    <li key={index}>
                                                         {menuItem.item}
                                                     </li>
                                                 );
@@ -178,62 +166,60 @@ const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
                                     </div>
                                 </AccordionBody>
                             </AccordionItem>
-                            <AccordionItem cssModule={styles} className={styles.accordion}>
-                                <AccordionHeader targetId='7' cssModule={styles} className={styles.accordionHeader}>NON-ALCOHOLIC BEVERAGES</AccordionHeader>
-                                <AccordionBody accordionId='7' cssModule={styles} className={styles.accordionBody}>
-                                    <div className={styles.listContainer}>
-                                        <div className={styles.header}>
-                                            <h3 className="pt-6">
-                                                SOFT DRINKS <span className={styles.priceNumber}>3</span>
-                                            </h3>
+                            <AccordionItem cssModule={props.className} className={props.className.accordion}>
+                                <AccordionHeader targetId='7' cssModule={props.className} className={props.className.accordionHeader}>NON-ALCOHOLIC BEVERAGES</AccordionHeader>
+                                <AccordionBody accordionId='7' cssModule={props.className} className={props.className.accordionBody}>
+                                    <div className={props.className.listContainer}>
+                                        <div className={props.className.header}>
+                                            <p className="pt-6">
+                                                SOFT DRINKS <span className={props.className.priceNumber}>3</span>
+                                            </p>
                                         </div>
                                         <ul>
                                             {groupBy(groupBy(props.props["Drinks"], "subcategory")["Non-Alcholic Beverages"],
                                             "thirdCategory")["Soft Drinks"].map((menuItem, index) => {
                                                 if(menuItem.active)return (
-                                                    <li key={index} className={styles.accordionItem}>
+                                                    <li key={index}>
                                                         {menuItem.item}
                                                     </li>
                                                 );
                                             })}
                                         </ul>
                                     </div>
-                                    <div className={styles.listContainer}>
-                                        <div className={styles.header}>
-                                            <h3>
-                                                HOT TEA <span className={styles.priceNumber}>6</span>
-                                            </h3>
+                                    <div className={props.className.listContainer}>
+                                        <div className={props.className.header}>
+                                            <p>
+                                                HOT TEA <span className={props.className.priceNumber}>6</span>
+                                            </p>
                                         </div>
                                         <ul>
                                             {groupBy(groupBy(props.props["Drinks"], "subcategory")["Non-Alcholic Beverages"],
                                             "thirdCategory")["Hot Tea"].map((menuItem, index) => {
                                                 if(menuItem.active)return (
-                                                    <li key={index} className={styles.accordionItem}>
+                                                    <li key={index} className={props.className.accordionItem}>
                                                         {menuItem.item}
                                                     </li>
                                                 );
                                             })}
                                         </ul>
                                     </div>
-                                    <div className={styles.listContainer}>
-                                        <div className={styles.header}>
-                                            <h3>
+                                    <div className={props.className.listContainer}>
+                                        <div className={props.className.header}>
+                                            <p>
                                                 THAI TEA{" "}
-                                                <span className={styles.priceNumber}>
+                                                <span className={props.className.priceNumber}>
                                                     {
                                                         groupBy(groupBy(props.props["Drinks"], "subcategory")["Non-Alcholic Beverages"],
                                                         "thirdCategory")["Thai Tea"][0].price1
                                                     }
                                                 </span>
-                                            </h3>
+                                            </p>
                                         </div>
                                     </div>
                                 </AccordionBody>
                             </AccordionItem>
                         </Accordion>
-                    </AccordionBody>
-                </AccordionItem>
-            </Accordion>
+
         </div>
     )
 }

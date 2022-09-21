@@ -63,12 +63,9 @@ const Footer = (props) => {
                     </div>
                 </div>
             </div>
-            <FootAccord 
-                accordionContainerClass={styles.accordionContainer}
-                headerClass={styles.accordionHeader}
-                iconContainerClass={styles.accordionIconContainer}
-                accordionClass={styles.accordion}
-                accordionBodyClass={styles.accordionBody}
+            <FootAccord
+                moduleChange={styles} 
+                className={styles}
             />
         </div>
     )

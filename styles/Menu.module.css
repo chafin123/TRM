@@ -1,5 +1,5 @@
 .menuContainer {
-    @apply  w-5/12 mx-auto pt-24;
+    @apply  w-11/12 lg:w-5/12 mx-auto pt-24;
     & > .menuEntry {
         @apply w-full;
     }
@@ -9,11 +9,70 @@
             
         }
         & > .buttonContainer {
-        @apply border-2 border-[#7C7257] h-fit p-2 self-center rounded-lg;
+        @apply border-2 border-[#7C7257] px-3 max-h-8 self-center rounded-lg;
                 
                 & > button > p {
                     @apply tracking-widest text-[#7C7257] text-xs;
                 }    
         }
     }
+}
+.accordion {
+    @apply text-white mx-auto w-full my-3;
+    & > .subHeader {
+        @apply text-lg mb-1;
+    }
+    & > .accordionBody {
+        @apply pl-5;
+    }
+        }
+.accordionItemContainer {
+@apply pt-8 pb-0 text-white flex flex-col text-start text-lg;
+    & > .accordionPriceContainer {
+        @apply flex w-fit flex-wrap;
+        & > p {
+            @apply mr-2 text-base w-fit flex flex-nowrap tracking-widest m-0;
+        }
+        & > p:not(:last-child) {
+            @apply border-r;
+        }
+        & > p:not(:first-child) {
+            @apply pl-1;
+        }
+        & > p:last-child {
+            @apply pl-0;
+        }
+    }
+}
+.priceNumber {
+    @apply text-[#7C7257] text-base font-bold px-1;
+}
+
+.listContainer {
+    @apply pl-2;
+    & > .header {
+        @apply flex text-xl;
+        & > p {
+            @apply mb-0;
+        }
+    }
+
+    & > ul {
+        @apply flex flex-wrap justify-start w-full pb-6;
+        & > li {
+            @apply pb-0.5 w-1/2 text-base tracking-wider pl-0;
+        }
+    }
+}
+.accordion-header {
+    @apply text-center border border-[#7C7257] bg-gradient-to-r from-black/20 to-black/20 w-full h-fit mb-5;
+    & > .accordion-button {
+        @apply h-fit text-xl font-nova-sans font-light tracking-wider py-3;   
+    }
+}
+.itemDescription{
+    @apply text-sm tracking-wider;
+}
+.topAccordionItem:not(:focus-within).topAccordionItem:not(:hover) {
+    @apply opacity-25;
 }

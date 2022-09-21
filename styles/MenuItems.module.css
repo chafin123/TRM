@@ -32,11 +32,11 @@
 .listContainer {
     @apply pl-2 ;
     & > .header {
-        @apply flex text-xl;
+        @apply flex text-xl pb-0 mb-0;
     }
 
     & > ul {
-        @apply flex flex-wrap justify-between w-full pb-6;
+        @apply flex flex-wrap justify-between w-full;
         & > li {
             @apply pb-0.5 w-1/2 text-base tracking-wider;
         }

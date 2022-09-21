@@ -8,7 +8,7 @@
             @apply pl-4 my-1 tracking-widest text-sm;
         }
         & > a {
-            @apply pl-4 my-1 tracking-widest text-sm;
+            @apply pl-4 my-1 tracking-widest text-sm text-white no-underline;
         }
     }
 
