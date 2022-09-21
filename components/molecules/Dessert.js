@@ -1,4 +1,5 @@
 import styles from '../../styles/MenuItems.module.css'
+import Spicy from '../atoms/Spicy'
 import {
     Accordion,
     AccordionBody,
