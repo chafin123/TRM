@@ -7,7 +7,6 @@ import Dessert from './../components/molecules/Dessert';
 import Image from "next/dist/client/image"
 import { useState } from 'react'
 import Link from 'next/link'
-import tempData from '../shared/temp.json'
 import {
     Accordion,
     AccordionBody,
