@@ -77,7 +77,7 @@ export default function Menu({ data }) {
 
             <AccordionItem className={styles.topAccordionItem} cssModule={styles}>
                 <AccordionHeader cssModule={styles} className={styles.accordionHeader} targetId='5'>DESSERT</AccordionHeader>
-                    <AccordionBody className={styles.topAccordionBody} cssModule={styles} className={styles.accordionBody} accordionId='5'>
+                    <AccordionBody className={styles.topAccordionBody} cssModule={styles} accordionId='5'>
             <Dessert props={data} className={styles} moduleChange={styles}/>
             </AccordionBody>
             </AccordionItem>
