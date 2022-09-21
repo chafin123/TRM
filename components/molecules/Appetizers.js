@@ -24,7 +24,7 @@ const Appetizers = (props) => {
               <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                 <AccordionHeader targetId='1' cssModule={props.moduleChange} className={props.className.accordionHeader}>APPETIZERS</AccordionHeader>
                 <AccordionBody accordionId='1' cssModule={props.moduleChange} className={props.className.accordionBody}>
-                  {groupBy(props.props["Appetizers"], "subcategory")["Appetizers"].map((menuItem, index) => {
+                  {groupBy(groupBy(props.props.menu,"category")["Appetizers"], "subcategory")["Appetizers"].map((menuItem, index) => {
                     if(menuItem.active)return (
                       <div
                         className={props.className.accordionItemContainer}
@@ -49,7 +49,7 @@ const Appetizers = (props) => {
               <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                 <AccordionHeader targetId='2' cssModule={props.moduleChange} className={props.className.accordionHeader}>SUSHI APPETIZERS</AccordionHeader>
                 <AccordionBody accordionId='2' cssModule={props.moduleChange} className={props.className.accordionBody}>
-                  {groupBy(props.props["Appetizers"], "subcategory")["Sushi Appertizers"].map((menuItem, index) => {
+                  {groupBy(groupBy(props.props.menu,"category")["Appetizers"], "subcategory")["Sushi Appertizers"].map((menuItem, index) => {
                     if(menuItem.active)return (
                       <div
                         className={props.className.accordionItemContainer}

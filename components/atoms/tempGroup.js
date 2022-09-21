@@ -1,7 +1,6 @@
-import data from '../../shared/temp.json'
 import { groupBy } from 'lodash';
 
-const grouper = () => {
+const grouper = (data) => {
     const groupedData = groupBy(data ,"category")
     return groupedData
 }

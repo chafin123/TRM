@@ -8,6 +8,7 @@ import Dessert from './../components/molecules/Dessert';
 import Image from "next/dist/client/image"
 import { useState } from 'react'
 import Link from 'next/link'
+import { groupBy } from 'lodash';
 import {
     Accordion,
     AccordionBody,
@@ -85,7 +86,8 @@ export default function Menu({ data }) {
     )
 }
 export async function getStaticProps() {
-    const data = grouper();
+    const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/restaurantMenu/menu')
+    const data = await res.json()
     return {
         props: {
             data,

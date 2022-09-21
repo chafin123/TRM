@@ -1,9 +1,9 @@
 import Spicy from '../atoms/Spicy'
-
+import { groupBy } from 'lodash'
 const Dessert = (props) => {
     return (
         <div className={props.className.menuEntry}>
-                        {props.props["Dessert"].map((menuItem, index) => {
+                        {groupBy(props.props.menu, "category")["Dessert"].map((menuItem, index) => {
                             if (menuItem.active) return (
                                 <div
                                     className={props.className.accordionItemContainer}

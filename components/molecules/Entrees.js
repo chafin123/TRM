@@ -27,7 +27,7 @@ const Entrees = (props) => {
                 <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                   <AccordionHeader targetId='1' cssModule={props.moduleChange} className={props.className.accordionHeader}>SOUPS</AccordionHeader>
                     <AccordionBody accordionId='1' cssModule={props.moduleChange} className={props.className.accordionBody}>
-                        {groupBy(props.props["Entrees"] ,"subcategory")["Soups"].map((menuItem, index) => {
+                        {groupBy(groupBy(props.props.menu,"category")["Entrees"],"subcategory")["Soups"].map((menuItem, index) => {
                           if(menuItem.active)return (
                               <div 
                                   className={props.className.accordionItemContainer}
@@ -45,7 +45,7 @@ const Entrees = (props) => {
                 <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                   <AccordionHeader targetId='2' cssModule={props.moduleChange} className={props.className.accordionHeader}>SALADS</AccordionHeader>
                       <AccordionBody accordionId="2" cssModule={props.moduleChange} className={props.className.accordionBody}>
-                        {groupBy(props.props["Entrees"],"subcategory")["Salads"].map((menuItem, index) => {
+                        {groupBy(groupBy(props.props.menu,"category")["Entrees"],"subcategory")["Salads"].map((menuItem, index) => {
                           if(menuItem.active)return (
                               <div 
                                   className={props.className.accordionItemContainer}
@@ -62,7 +62,7 @@ const Entrees = (props) => {
                 <AccordionHeader targetId="3" cssModule={props.moduleChange} className={props.className.accordionHeader}>VEGETARIAN</AccordionHeader>
                   <AccordionBody accordionId="3" cssModule={props.moduleChange} className={props.className.accordionBody}>
                   <p>Served with white rice</p>
-                  {groupBy(props.props["Entrees"],"subcategory")["Vegetarian"].map((menuItem, index) => {
+                  {groupBy(groupBy(props.props.menu,"category")["Entrees"],"subcategory")["Vegetarian"].map((menuItem, index) => {
                     if(menuItem.active)return (
                         <div
                             className={props.className.accordionItemContainer}
@@ -80,7 +80,7 @@ const Entrees = (props) => {
                   <AccordionBody accordionId="4" cssModule={props.moduleChange} className={props.className.accordionBody}>
                     <p>Served with white rice.</p>
                     <p>*Served without white rice.</p>
-                    {groupBy(props.props["Entrees"], "subcategory")["Classics"].map((menuItem, index) => {
+                    {groupBy(groupBy(props.props.menu,"category")["Entrees"], "subcategory")["Classics"].map((menuItem, index) => {
                         if(menuItem.active) return (
                             <div
                                 className={props.className.accordionItemContainer}
@@ -113,7 +113,7 @@ const Entrees = (props) => {
                   <AccordionBody accordionId="5" cssModule={props.moduleChange} className={props.className.accordionBody}>
                     <p>Served with rice.</p>
                     <p>*Served without rice.</p>
-                    {groupBy(props.props['Entrees'], "subcategory")["Siam"].map((menuItem, index) => {
+                    {groupBy(groupBy(props.props.menu,"category")['Entrees'], "subcategory")["Siam"].map((menuItem, index) => {
                         if(menuItem.active) return(
                             <div
                                 className={props.className.accordionItemContainer}
@@ -137,20 +137,20 @@ const Entrees = (props) => {
               <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                 <AccordionHeader targetId="6" cssModule={props.moduleChange} className={props.className.accordion}>HOUSE SPECIALS</AccordionHeader>
                   <AccordionBody accordionId='6' cssModule={props.moduleChange} className={props.className.accordionBody}>
-                    <Specials props={groupBy(props.props["Entrees"], "subcategory")["House Specials"]} className={props.className}/>
+                    <Specials props={groupBy(groupBy(props.props.menu,"category")["Entrees"], "subcategory")["House Specials"]} className={props.className}/>
                   </AccordionBody>
               </AccordionItem>
               <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                 <AccordionHeader targetId="7" cssModule={props.moduleChange} className={props.className.accordion}>LUNCH SPECIALS</AccordionHeader>
                   <AccordionBody accordionId='7' cssModule={props.moduleChange} className={props.className.accordionBody}>
                     <p>Served with white rice and a choice of soup (miso, wonton, hot & sour).</p>
-                    <Specials props={groupBy(props.props["Entrees"], "subcategory")["Lunch Specials"]} className={props.className}/>
+                    <Specials props={groupBy(groupBy(props.props.menu,"category")["Entrees"], "subcategory")["Lunch Specials"]} className={props.className}/>
                   </AccordionBody>
                 </AccordionItem>
                 <AccordionItem cssModule={props.moduleChange} className={props.className.accordion}>
                 <AccordionHeader targetId="8" cssModule={props.moduleChange} className={props.className.accordion}>DINNER SPECIALS</AccordionHeader>
                   <AccordionBody accordionId='8' cssModule={props.moduleChange} className={props.className.accordionBody}>
-                    <Specials props={groupBy(props.props["Entrees"], "subcategory")["Dinner Specials"]} className={props.className}/>
+                    <Specials props={groupBy(groupBy(props.props.menu,"category")["Entrees"], "subcategory")["Dinner Specials"]} className={props.className}/>
                 </AccordionBody>
               </AccordionItem>
             </Accordion>
