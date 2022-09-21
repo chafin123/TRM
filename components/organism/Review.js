@@ -1,13 +1,11 @@
 import Image from "next/image"
 import styles from '../../styles/Review.module.css'
-import data from '../../shared/Reviews.json'
 import { useState, useEffect } from 'react'
-const Review = () => {
-
+const Review = (props) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => currentIndex >= data.reviews.length -1 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1), 10000);
+        const interval = setInterval(() => currentIndex >= props.props.reviews.length -1 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1), 10000);
         return () => clearInterval(interval)
     });
 
@@ -32,10 +30,10 @@ const Review = () => {
                         width={170}
                     />
                 </div>
-                    {data.reviews.map(review => {
+                    {props.props.reviews.map((review, index) => {
                         return (
-                        <div className={review.id == currentIndex ? styles.reviewText : "hidden"} id={data.reviews[currentIndex].id} key={review.id}>
-                            <p className={styles.text}>{`"${review.text}"`}</p>
+                        <div className={index == currentIndex ? styles.reviewText : "hidden"} key={index}>
+                            <p className={styles.text}>{`"${review.text.length > 350 ? `${review.text.slice(0, 350)}  ...` : review.text}"`}</p>
                             <p className={styles.author}>-{review.author}</p>
                         </div>
                         )

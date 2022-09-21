@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 import Welcome from '../components/organism/Welcome'
 import Review from '../components/organism/Review'
 import Footer from '../components/organism/Footer'
-
-export default function Home() {
+import reviews from '../shared/Reviews.json'
+export default function Home({ data }) {
 
 
   return (
@@ -21,9 +21,18 @@ export default function Home() {
       <main className={styles.main}>
         <Carousel/>
         <Welcome/>
-        <Review />
+        <Review props={data}/>
         <Footer id='bop'/>
       </main>
     </div>
   )
+}
+export async function getStaticProps() {
+  const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/restaurantMenu/reviews')
+  const data = await res.json()
+  return {
+      props: {
+          data,
+      },
+  }
 }
