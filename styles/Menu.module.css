@@ -9,10 +9,10 @@
             
         }
         & > .buttonContainer {
-        @apply border-2 border-[#7C7257] px-3 max-h-8 self-center rounded-lg;
+        @apply border-2 border-basil-peat px-3 max-h-8 self-center rounded-lg;
                 
                 & > button > p {
-                    @apply tracking-widest text-[#7C7257] text-xs;
+                    @apply tracking-widest text-basil-peat text-xs;
                 }    
         }
     }
@@ -25,6 +25,9 @@
     & > .accordionBody {
         @apply pl-5;
     }
+    & > .accordionBody:last-child {
+        @apply pb-10;
+    }
         }
 .accordionItemContainer {
 @apply pt-8 pb-0 text-white flex flex-col text-start text-lg;
@@ -32,6 +35,7 @@
         @apply flex w-fit flex-wrap;
         & > p {
             @apply mr-2 text-base w-fit flex flex-nowrap tracking-widest m-0;
+            
         }
         & > p:not(:last-child) {
             @apply border-r;
@@ -42,12 +46,12 @@
         & > p:last-child {
             @apply pl-0;
         }
+       
+    }
+    & > .itemDescription{
+    @apply text-sm tracking-wider italic;
     }
 }
-.priceNumber {
-    @apply text-[#7C7257] text-base font-bold px-1;
-}
-
 .listContainer {
     @apply pl-2;
     & > .header {
@@ -65,14 +69,23 @@
     }
 }
 .accordion-header {
-    @apply text-center border border-[#7C7257] bg-gradient-to-r from-black/20 to-black/20 w-full h-fit mb-5;
+    @apply text-center border border-basil-peat bg-gradient-to-r from-black/20 to-black/20 w-full h-fit mb-5;
     & > .accordion-button {
-        @apply h-fit text-xl font-nova-sans font-light tracking-wider py-3;   
+        @apply h-fit w-full text-xl font-nova-sans font-light tracking-wider py-3;   
     }
 }
-.itemDescription{
-    @apply text-sm tracking-wider;
-}
-.topAccordionItem:not(:focus-within).topAccordionItem:not(:hover) {
+.topAccordionItem:not(:focus-within).topAccordionItem:not(:hover).topAccordionItem:not(:active) {
     @apply opacity-25;
+}
+.priceNumber {
+            @apply text-basil-peat font-bold pl-1;
+}
+.foot {
+@apply flex justify-between;
+    & > .ctaContainer {
+    @apply text-basil-peat;
+    }
+    & > .iconContainer {
+    @apply w-3/12 flex flex-row justify-between;
+    }
 }

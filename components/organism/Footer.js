@@ -29,14 +29,12 @@ const Footer = (props) => {
                         </a>
                 </div>
                 <div className={styles.contact}>
-                    <h3>
-                        CONTACT
-                    </h3>
+                    <h3>CONTACT</h3>
                         <a href='tel: +1-907-376-722'>
                             <p>907.376.7222</p>
                         </a>
                     <div className={styles.iconContainer}>
-                        <a>
+                        <a href='https://www.facebook.com/basilgingerrestaurant/'>
                             <Image 
                                 src='/icons/facebook.png'
                                 alt='facebook icon'
@@ -44,7 +42,7 @@ const Footer = (props) => {
                                 width={20}
                             />
                         </a>
-                        <a>
+                        <a href='https://www.instagram.com/explore/locations/799258566887951/basil-ginger'>
                             <Image 
                                 src='/icons/instagram.png'
                                 alt='facebook icon'

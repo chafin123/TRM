@@ -8,7 +8,7 @@ module.exports = ({
   ],
   theme: {
     extend: {
-      color: {
+      colors: {
         'basil-peat': '#7C7257',
         'basil-red': '#B12A1B',
       },

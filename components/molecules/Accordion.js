@@ -46,7 +46,7 @@ const FootAccord = (props) => {
         </a>
         <div className={props.className.iconContainer}>
           <div>
-            <a>
+            <a href="https://www.facebook.com/basilgingerrestaurant/">
                 <Image 
                     src='/icons/facebook.png'
                     alt='facebook icon'
@@ -56,7 +56,7 @@ const FootAccord = (props) => {
             </a>
             </div>
             <div>
-            <a>
+            <a href="https://www.instagram.com/explore/locations/799258566887951/basil-ginger">
                 <Image 
                     src='/icons/instagram.png'
                     alt='facebook icon'

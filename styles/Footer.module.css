@@ -44,7 +44,7 @@
     @apply text-white mx-auto w-full my-3;
         }
 .accordion-header {
-    @apply text-center border border-[#7C7257] bg-gradient-to-r from-black/20 to-black/20 w-full h-fit;
+    @apply text-center border border-basil-peat bg-gradient-to-r from-black/20 to-black/20 w-full h-fit;
     & > .accordion-button {
         @apply h-fit text-xl font-nova-sans font-light tracking-wider py-3;   
     }

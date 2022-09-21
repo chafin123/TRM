@@ -2,13 +2,12 @@ import styles from '../styles/Menu.module.css'
 import Drinks from './../components/molecules/Drinks';
 import Appetizers from './../components/molecules/Appetizers';
 import Entrees from '../components/molecules/Entrees';
-import grouper from '../components/atoms/tempGroup';
 import Sushi from '../components/molecules/Sushi';
 import Dessert from './../components/molecules/Dessert';
 import Image from "next/dist/client/image"
 import { useState } from 'react'
 import Link from 'next/link'
-import { groupBy } from 'lodash';
+import tempData from '../shared/temp.json'
 import {
     Accordion,
     AccordionBody,
@@ -82,6 +81,43 @@ export default function Menu({ data }) {
             </AccordionBody>
             </AccordionItem>
         </Accordion>
+        <div className={styles.foot}>
+            <div className={styles.ctaContainer}>
+                <p>Follow & Review Us</p>
+            </div>
+            <div className={styles.iconContainer}>
+                <div>
+                    <a href='https://www.facebook.com/basilgingerrestaurant/'>
+                        <Image 
+                            src='/icons/facebook.svg'
+                            alt='facebook icon'
+                            height={20}
+                            width={20}
+                        />
+                    </a>
+                </div>
+                <div>
+                    <a href='https://www.instagram.com/explore/locations/799258566887951/basil-ginger'>
+                        <Image 
+                            src='/icons/instaham.svg'
+                            alt='facebook icon'
+                            height={20}
+                            width={20}
+                        />
+                    </a>
+                </div>
+                <div>
+                    <a href='https://www.google.com/maps/place/Basil+Ginger/@61.5744972,-149.421341,17z/data=!3m1!4b1!4m6!3m5!1s0x56c8de1a9924ce4b:0xa9fcf353750cfe37!8m2!3d61.5744972!4d-149.421341!16s%2Fg%2F11fy2s2qmn'>
+                        <Image 
+                            src='/icons/googles.svg'
+                            alt='facebook icon'
+                            height={16}
+                            width={20}
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>    
     )
 }
