@@ -7,10 +7,17 @@
         & > p {
             @apply pl-4 my-1 tracking-widest text-sm;
         }
+        p:hover {
+            @apply text-basil-peat cursor-pointer;
+        }
         & > a {
             @apply pl-4 my-1 tracking-widest text-sm text-white no-underline;
         }
+        a:hover {
+            @apply text-basil-peat;
+        }
     }
+
 
     & > .logo {
         @apply pt-2 order-1 lg:order-2;

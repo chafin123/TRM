@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+
 body {
-  @apply  bg-[url('/images/bg-images/black-bg.jpg')] max-w-[1440px] mx-auto;
+  @apply  bg-[url('/images/bg-images/black-bg.jpg')] bg-cover max-w-[1440px] mx-auto;
   
-  font-family: 'gill-sans-nova', 'sans-serif';
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+a:hover {
+  @apply text-basil-peat
 }
 
 * {
@@ -29,6 +31,7 @@ a {
 h3,
 h2,
 h1,
+a,
 p {
   @apply font-nova-sans tracking-wider;
 }

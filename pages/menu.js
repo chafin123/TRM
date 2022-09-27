@@ -36,9 +36,7 @@ export default function Menu({ data }) {
                 />
                 </Link>
                 </div>
-                <div className={styles.buttonContainer}>
                     <button className={styles.callButton}><p>CALL NOW</p></button>
-                </div>
         </div>
         <Accordion open={open} toggle={toggle} cssModule={styles} className={styles.topAccordion}>
         <AccordionItem className={styles.topAccordionItem} cssModule={styles}>

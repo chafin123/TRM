@@ -24,12 +24,18 @@
                     @apply hidden;
                 }
             }
-            & > .logo {
-                @apply  pb-4 self-end z-10 invisible lg:visible;
-            }
-
+            
             & > .carouselGradient {
-                @apply absolute left-0 bottom-0 bg-gradient-to-r from-black/[0.3] to-black/[0.2] lg:from-black w-full h-1/6 z-10;
+                @apply absolute flex flex-row justify-between items-center left-0 bottom-0 bg-gradient-to-r from-black/[0.3] to-black/[0.2] lg:from-black w-full h-1/6 z-10;
+                & > .spacer {
+                    @apply lg:pl-52 hidden lg:block;
+                }
+                & > .carouselImageTextContainer {
+                    @apply text-white text-xl w-full lg:w-40 lg:pr-10 text-center;
+                }
+                & > .logo {
+                    @apply self-center w-fit z-10 hidden lg:block;
+                }
             }
         }
         
@@ -37,23 +43,24 @@
             @apply relative overflow-hidden w-full h-full scroll-smooth snap-x snap-mandatory touch-pan-x z-0;
             
             & > .carouselItem {
-                @apply text-center relative w-full h-full snap-start ;
-                
+                @apply text-center relative w-full h-full snap-start;
+                animation-duration: 0.5s;
+                animation-name:slidein;                
                 & > .carouselImage {
                     @apply w-full aspect-square;
                 }
                 
-                & > .carouselImageText {
-                    @apply text-white right-20 md:right-80 md:bottom-4  lg:right-10 bottom-1 lg:bottom-10 absolute text-xl;
-                }
                 
 
             }
         }
     }
 }
-.hide {
-    @apply hidden;
+@keyframes slidein {
+    from {
+        @apply right-[100rem];
+    }
+    to {
+        @apply right-0
+    }
 }
-
-

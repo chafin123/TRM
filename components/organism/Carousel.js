@@ -34,14 +34,19 @@ const Carousel = () => {
                     />
                     <span className={styles.screenReader}>Previous</span>
                     </button>
-                    <div className={styles.carouselGradient}></div>
-                    <div className={styles.logo}>
-                        <Image 
-                            src="/icons/frontiersman-award.png"
-                            alt="2021 Frontiersman Best of The Valley award"
-                            height={60}
-                            width={140}
-                        />
+                    <div className={styles.carouselGradient}>
+                        <div className={styles.spacer} />
+                        <div className={styles.logo}>
+                            <Image 
+                                src="/icons/frontiersman-award.png"
+                                alt="2021 Frontiersman Best of The Valley award"
+                                height={60}
+                                width={140}
+                            />
+                        </div>
+                        <div className={styles.carouselImageTextContainer}>
+                            <h3>{data.imageArray[currentIndex].name}</h3>
+                        </div>
                     </div>
                     <button
                         onClick={moveNext}
@@ -64,7 +69,7 @@ const Carousel = () => {
                             return (
                                 <div
                                     key={index}
-                                    className={index == currentIndex ? styles.carouselItem : styles.hide}
+                                    className={index == currentIndex ? styles.carouselItem : "hidden"}
                                 >
                                     <Image 
                                         src={image.src}
@@ -74,11 +79,7 @@ const Carousel = () => {
                                         width={1920}
                                         layout="responsive"
                                     />
-                                    <h3
-                                        className={styles.carouselImageText}
-                                    >
-                                        {image.name}    
-                                    </h3>
+                                    
                                 </div>
                             )
                     })}

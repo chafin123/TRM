@@ -4,17 +4,17 @@
         @apply w-full;
     }
     & > .menuHeader {
-        @apply w-full flex flex-row justify-between pb-6;
-        & > .logoContainer {
-            
+        @apply w-full flex flex-row justify-between items-center pb-6;
+        & > .logoContainer:hover {
+            @apply cursor-pointer;
+            filter: saturate(5);
         }
-        & > .buttonContainer {
-        @apply border-2 border-basil-peat px-3 max-h-8 self-center rounded-lg;
-                
-                & > button > p {
-                    @apply tracking-widest text-basil-peat text-xs;
-                }    
+        & > button {
+            @apply border-2 w-fit h-fit border-basil-peat rounded-lg p-2 text-basil-peat text-xs;
         }
+        button:hover {
+            filter: saturate(5);
+        }    
     }
 }
 .accordion {
@@ -38,18 +38,14 @@
             
         }
         & > p:not(:last-child) {
-            @apply border-r;
-        }
-        & > p:not(:first-child) {
-            @apply pl-1;
+            @apply border-r pr-1;
         }
         & > p:last-child {
             @apply pl-0;
         }
-       
     }
     & > .itemDescription{
-    @apply text-sm tracking-wider italic;
+        @apply text-sm tracking-wider italic;
     }
 }
 .listContainer {
@@ -60,7 +56,6 @@
             @apply mb-0;
         }
     }
-
     & > ul {
         @apply flex flex-wrap justify-start w-full pb-6;
         & > li {
@@ -69,13 +64,13 @@
     }
 }
 .accordion-header {
-    @apply text-center border border-basil-peat bg-gradient-to-r from-black/20 to-black/20 w-full h-fit mb-5;
+    @apply text-center border border-basil-peat bg-gradient-to-r from-black/50 to-black/50 w-full h-fit mb-5 rounded-md;
     & > .accordion-button {
         @apply h-fit w-full text-xl font-nova-sans font-light tracking-wider py-3;   
     }
 }
 .topAccordionItem:not(:focus-within).topAccordionItem:not(:hover).topAccordionItem:not(:active) {
-    @apply opacity-25;
+    @apply opacity-75;
 }
 .priceNumber {
             @apply text-basil-peat font-bold pl-1;

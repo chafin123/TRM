@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css'
 import Welcome from '../components/organism/Welcome'
 import Review from '../components/organism/Review'
 import Footer from '../components/organism/Footer'
-import reviews from '../shared/Reviews.json'
 export default function Home({ data }) {
 
 

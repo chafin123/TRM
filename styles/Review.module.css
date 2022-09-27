@@ -1,5 +1,5 @@
 .reviewContainer {
-    @apply relative lg:justify-center items-center w-full h-96 lg:h-72 pb-10 flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom ;
+    @apply relative lg:justify-center items-center w-full h-96 lg:h-72  flex flex-row bg-[url('/images/bg-images/wood-bg.jpg')] bg-bottom ;
 
     & > .bowlContainer {
         @apply  absolute -left-28 -top-10 invisible lg:visible;
@@ -7,7 +7,7 @@
     }
 
     & > .review {
-        @apply flex flex-col w-full lg:w-2/6  p-5 lg:p-0 italic;
+        @apply flex flex-col w-full lg:w-2/6  p-5 lg:p-0 italic self-center;
 
         & > .logoContainer {
             @apply w-fit;
@@ -17,7 +17,7 @@
             }
         }
         & > .reviewText {
-            @apply flex flex-col animate-fade;
+            @apply flex flex-col animate-fade self-center;
 
             & > .author {
                 @apply place-self-end text-sm text-white font-nova-sans;

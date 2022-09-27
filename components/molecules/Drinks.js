@@ -8,17 +8,17 @@ import {
 } from 'reactstrap';
 import { useState } from 'react'
 const Drinks = (props = groupBy(props["Drinks"], "subcategory")) => {
-    const [nestOpen, setNestOpen] = useState('');
-    const nestToggle = (id) => {
-        if (nestOpen === id) {
-            setNestOpen();
+    const [open, setOpen] = useState('');
+    const toggle = (id) => {
+        if (open === id) {
+            setOpen();
         } else {
-            setNestOpen(id);
+            setOpen(id);
         }
     };
     return (
         <div className={props.className.menuEntry}>
-                        <Accordion flush open={nestOpen} toggle={nestToggle} cssModule={props.moduleChange} className={props.className.accordion} >
+                        <Accordion flush open={open} toggle={toggle} cssModule={props.moduleChange} className={props.className.accordion} >
                             <AccordionItem cssModule={props.className} className={props.className.accordion}>
                                 <AccordionHeader targetId='1' cssModule={props.className} className={props.className.accordion}>SAKE</AccordionHeader>
                                 <AccordionBody accordionId='1' cssModule={props.className} className={props.className.accordionBody}>

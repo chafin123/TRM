@@ -26,8 +26,9 @@ const Review = (props) => {
                         src='/icons/google-review.png'
                         alt='5 star Google review'
                         className={styles.logo}
-                        height={30}
-                        width={170}
+                        height={32}
+                        width={222}
+                        layout={"intrinsic"}
                     />
                 </div>
                     {props.props.reviews.map((review, index) => {
