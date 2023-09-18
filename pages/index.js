@@ -9,13 +9,13 @@ import Image from 'next/image';
 export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
-      <div className=" text-center">
+      <div className=" ">
         <Image src="/images/logo.png" alt='' width={400} height={400}/>
       </div>
 
 
       <div className={styles.entriesContainer}>
-        <div className='text-center'>
+        <div className=''>
           <h2 className=' text-5xl'>Today's Specials</h2>
         </div>
           <Soup props={data} className={styles} moduleChange ={styles}/>
