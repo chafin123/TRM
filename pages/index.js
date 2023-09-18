@@ -10,7 +10,7 @@ export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
       <div className=" text-center">
-        <Image src="/../public/images/logo.png" alt='' width={400} height={400}/>
+        <Image src="/images/logo.png" alt='' width={400} height={400}/>
       </div>
 
 
