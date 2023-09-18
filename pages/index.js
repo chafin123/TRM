@@ -9,12 +9,12 @@ import Image from 'next/image';
 export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
-      <div className='text-center'>
-        <div className="pt-10 pb-10">
-          <Image src="/images/logo.png" alt='' width={300} height={300}/>
+      <div className="text-center w-full flex justify-evenly before:contents-[''] before:absolute before:left-0 before:w-[100rem] before:h-[300px] before:z-[-1] before:bg-[#881b1d]">
+        <div className="pt-3 pb-10 flex">
+          <Image src="/images/logo.png" alt='' width={250} height={250}/>
         </div>
-        <div className='pb-10'>
-          <h2 className=' text-5xl'>Today's Specials</h2>
+        <div className='pb-10 z-10 self-center flex'>
+          <h2 className='text-white text-5xl'>Today's Specials</h2>
         </div>
       </div>
 
