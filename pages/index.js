@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import styles from '../styles/Menu.module.css'
 import Appetizers from './../components/molecules/Appetizers';
 import Entrees from '../components/molecules/Entrees';
