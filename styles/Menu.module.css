@@ -1,9 +1,9 @@
 .menuContainer {
     @apply  mx-auto;
     & > .entriesContainer {
-        @apply mx-auto w-1/2;
+        @apply mx-auto w-full;
         & > .menuEntry {
-            @apply w-11/12 relative ml-36;
+            @apply w-1/2 relative ml-[37.6%]  items-center;
     
             & > .menuSectionTitle {
                 @apply absolute left-[-14rem] top-6 text-4xl font-bold;
