@@ -9,12 +9,12 @@ import Image from 'next/image';
 export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
-      <div className="pt-10 pb-10">
-        <Image src="/images/logo.png" alt='' width={300} height={300}/>
-      </div>
 
 
       <div className={styles.entriesContainer}>
+      <div className="pt-10 pb-10">
+        <Image src="/images/logo.png" alt='' width={300} height={300}/>
+      </div>
         <div className='pb-10'>
           <h2 className=' text-5xl'>Today's Specials</h2>
         </div>

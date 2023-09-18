@@ -10,9 +10,9 @@
     "id": 2
   },
   {
-    "item": "Chilli",
-    "description": "Beef And Beans",
-    "price1": 13.34,
+    "item": "Ribeye",
+    "description": "With a bacon and basil cream sauce",
+    "price1": 37,
     "price2": "",
     "category": "Entree",
     "extra": false,
@@ -38,9 +38,9 @@
     "id": 5
   },
   {
-    "item": "Baked Bree",
-    "description": "Bree Baked with berries and nuts",
-    "price1": 9,
+    "item": "Baked Brie",
+    "description": "With roasted apples and walnuts",
+    "price1": 12.50,
     "price2": "",
     "category": "Appetizer",
     "extra": false,
@@ -48,13 +48,53 @@
     "id": 6
   },
   {
-    "item": "Bread",
-    "description": "Bread",
-    "price1": 2,
+    "item": "Scallops",
+    "description": "With a bacon and basil cream sauce",
+    "price1": 15.75,
     "price2": "",
     "category": "Appetizer",
     "extra": false,
     "active": true,
     "id": 7
+  },
+  {
+    "item": "Salmon",
+    "description": "Orange glazed with soy, ginger, sesame & garlic. Served with rice &. vegetables",
+    "price1": 37,
+    "price2": "",
+    "category": "Entree",
+    "extra": false,
+    "active": true,
+    "id": 8
+  },
+  {
+    "item": "Cod",
+    "description": "Breaded & baked in white wine. Paremesan & parsley served with rice & vegetables",
+    "price1": 22,
+    "price2": "",
+    "category": "Appetizer",
+    "extra": false,
+    "active": true,
+    "id": 9
+  },
+  {
+    "item": "Short Ribs",
+    "description": "Red win sauce with mashed potatoes & vegetables",
+    "price1": 26,
+    "price2": "",
+    "category": "Appetizer",
+    "extra": false,
+    "active": true,
+    "id": 10
+  },
+  {
+    "item": "Pizza Special",
+    "description": "Bacon, jalepeño. mushroom with a garlic oil sauce",
+    "price1": 22,
+    "price2": "",
+    "category": "Appetizer",
+    "extra": false,
+    "active": true,
+    "id": 11
   }
 ]
