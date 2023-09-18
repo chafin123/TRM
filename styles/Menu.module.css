@@ -1,7 +1,7 @@
 .menuContainer {
-    @apply  mx-auto w-full ml-[25%];
+    @apply  mx-auto w-full;
     & > .entriesContainer {
-        @apply mx-auto w-full;
+        @apply mx-auto w-full ml-[25%];
         & > .menuEntry {
             @apply w-full relative  items-center;
     

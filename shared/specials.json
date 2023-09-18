@@ -1,10 +1,10 @@
 [
   {
-    "item": "Butter Chicken",
-    "description": "Chick and Butter",
-    "price1": 12.75,
-    "price2": "",
-    "category": "Entree",
+    "item": "Apple Jack",
+    "description": "Apple Cider and tomato base",
+    "price1": 6,
+    "price2": 8,
+    "category": "Soup",
     "extra": false,
     "active": true,
     "id": 2
@@ -20,7 +20,7 @@
     "id": 3
   },
   {
-    "item": "Clam Chowder",
+    "item": "Creamy vegetable",
     "price1": 6,
     "price2": 8,
     "category": "Soup",
@@ -29,9 +29,9 @@
     "id": 4
   },
   {
-    "item": "German Potato Soup",
-    "price1": 7,
-    "price2": 9,
+    "item": "Beef Chili",
+    "price1": 6,
+    "price2": 8,
     "category": "Soup",
     "extra": false,
     "active": true,
@@ -72,7 +72,7 @@
     "description": "Breaded & baked in white wine. Paremesan & parsley served with rice & vegetables",
     "price1": 22,
     "price2": "",
-    "category": "Appetizer",
+    "category": "Entree",
     "extra": false,
     "active": true,
     "id": 9
@@ -82,7 +82,7 @@
     "description": "Red win sauce with mashed potatoes & vegetables",
     "price1": 26,
     "price2": "",
-    "category": "Appetizer",
+    "category": "Entree",
     "extra": false,
     "active": true,
     "id": 10
@@ -92,7 +92,7 @@
     "description": "Bacon, jalepeño. mushroom with a garlic oil sauce",
     "price1": 22,
     "price2": "",
-    "category": "Appetizer",
+    "category": "Entree",
     "extra": false,
     "active": true,
     "id": 11
