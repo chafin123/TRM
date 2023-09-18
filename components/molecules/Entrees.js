@@ -25,10 +25,11 @@ const Entrees = (props) => {
   <div className={props.className.menuSectionTitle}>
       <h3>Entrées</h3>
   </div>
+  <div className={props.className.menuCatergoryContainer}>
   {groupBy(props.props,"category")["Entree"].map((menuItem, index) => {
     if(menuItem.active)return (
         <div 
-            className={props.className.accordionItemContainer}
+            className={props.className.menuItemContainer}
             key={index}>
             <p className={props.className.itemText}>{menuItem.item}<span className={props.className.priceNumber}>{menuItem.price1}</span>{menuItem.price2 && <span className={props.className.priceNumber}>{menuItem.price2}</span>}</p>
             {menuItem.description &&
@@ -37,6 +38,7 @@ const Entrees = (props) => {
         </div>
     )
   })}
+  </div>
   </div>
 
     )

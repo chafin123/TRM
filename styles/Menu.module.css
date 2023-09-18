@@ -6,28 +6,26 @@
             @apply w-full relative  items-center;
     
             & > .menuSectionTitle {
-                @apply absolute left-[-14rem] top-6 text-4xl font-bold;
+                @apply absolute left-[-14rem] top-8 text-4xl font-bold;
             }
         }
     }
 }
-.accordionItemContainer {
-@apply pt-8 pb-0 text-white flex flex-col text-start text-lg;
-    & > .accordionPriceContainer {
-        @apply flex w-fit flex-wrap;
-        & > p {
-            @apply mr-2 text-base w-fit flex flex-nowrap tracking-widest m-0;
-            
+.menuCatergoryContainer {
+    @apply pt-8 pb-8 text-white flex flex-col text-start text-lg;
+    & > .menuItemContainer {
+        @apply pb-2;
+        
+        & > .itemDescription{
+            @apply text-2xl italic;
         }
-        & > p:not(:last-child) {
-            @apply border-r pr-1;
+        & > .itemText {
+            @apply text-4xl font-extrabold;
+            & > .priceNumber {
+                @apply text-[#881b18] font-bold pl-1 text-2xl;
+
+            }
         }
-        & > p:last-child {
-            @apply pl-0;
-        }
-    }
-    & > .itemDescription{
-        @apply text-2xl italic;
     }
 }
 .listContainer {
@@ -44,10 +42,4 @@
             @apply pb-0.5 w-1/2 text-base tracking-wider pl-0;
         }
     }
-}
-.priceNumber {
-    @apply text-[#881b18] font-bold pl-1;
-}
-.itemText {
-    @apply text-4xl font-extrabold;
 }
