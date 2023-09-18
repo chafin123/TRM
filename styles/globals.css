@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,35 +35,5 @@ h2,
 h1,
 a,
 p {
-  @apply font-nova-sans tracking-wider text-[#881B1D];
+  @apply font-garmond tracking-wider text-[#881B1D];
 }
-@font-face {
-  font-family:"gill-sans-nova";
-  src:url("https://use.typekit.net/af/21fe31/00000000000000007735bb95/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/21fe31/00000000000000007735bb95/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/21fe31/00000000000000007735bb95/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-  font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-  }
-  
-  @font-face {
-  font-family:"gill-sans-nova";
-  src:url("https://use.typekit.net/af/06d56d/00000000000000007735bb9d/30/l?subset_id=2&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/06d56d/00000000000000007735bb9d/30/d?subset_id=2&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/06d56d/00000000000000007735bb9d/30/a?subset_id=2&fvd=i4&v=3") format("opentype");
-  font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
-  }
-  
-  @font-face {
-  font-family:"gill-sans-nova";
-  src:url("https://use.typekit.net/af/e9b431/00000000000000007735bbb4/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/e9b431/00000000000000007735bbb4/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/e9b431/00000000000000007735bbb4/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
-  font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
-  }
-  
-  @font-face {
-  font-family:"gill-sans-nova";
-  src:url("https://use.typekit.net/af/ee6e20/00000000000000007735bbbf/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/ee6e20/00000000000000007735bbbf/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/ee6e20/00000000000000007735bbbf/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
-  font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
-  }
-  
-  @font-face {
-  font-family:"gill-sans-nova";
-  src:url("https://use.typekit.net/af/7cdd67/00000000000000007735bbc2/30/l?subset_id=2&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/7cdd67/00000000000000007735bbc2/30/d?subset_id=2&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/7cdd67/00000000000000007735bbc2/30/a?subset_id=2&fvd=i6&v=3") format("opentype");
-  font-display:auto;font-style:italic;font-weight:600;font-stretch:normal;
-  }
-  

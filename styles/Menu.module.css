@@ -3,10 +3,10 @@
     & > .entriesContainer {
         @apply mx-auto w-1/2;
         & > .menuEntry {
-            @apply w-6/12 relative mx-auto;
+            @apply w-11/12 relative ml-36;
     
             & > .menuSectionTitle {
-                @apply absolute left-[-14rem] top-6 text-4xl;
+                @apply absolute left-[-14rem] top-6 text-4xl font-bold;
             }
         }
     }
@@ -27,7 +27,7 @@
         }
     }
     & > .itemDescription{
-        @apply text-xl italic;
+        @apply text-2xl italic;
     }
 }
 .listContainer {
@@ -49,5 +49,5 @@
     @apply text-[#881b18] font-bold pl-1;
 }
 .itemText {
-    @apply text-2xl;
+    @apply text-4xl font-extrabold;
 }

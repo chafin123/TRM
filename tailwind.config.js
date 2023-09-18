@@ -13,7 +13,7 @@ module.exports = ({
         'basil-red': '#B12A1B',
       },
       fontFamily: {
-        'nova-sans': ['gill-sans-nova', 'sans-serif']
+        'garmond': ['eb_garamond', 'serif']
       },
       animation: {
         fade: 'fadeOut 2s ease-in-out',
