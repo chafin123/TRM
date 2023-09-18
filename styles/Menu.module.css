@@ -1,5 +1,5 @@
 .menuContainer {
-    @apply  mx-auto w-fit;
+    @apply  mx-auto w-full ml-[25%];
     & > .entriesContainer {
         @apply mx-auto w-full;
         & > .menuEntry {
@@ -17,7 +17,7 @@
         @apply pb-2;
         
         & > .itemDescription{
-            @apply text-2xl italic mt-[-8px] max-w-2xl;
+            @apply text-2xl italic mt-[-8px] max-w-5xl;
         }
         & > .itemText {
             @apply text-4xl font-extrabold;
