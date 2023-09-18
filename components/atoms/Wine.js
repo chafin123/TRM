@@ -10,7 +10,7 @@ const Wine = (props) => {
                             <p className={props.className.accordionItemPrice}>GLASS <span className={props.className.priceNumber}>{menuItem.price1}</span></p>
                             <p className={props.className.accordionItemPrice}>BOTTLE <span className={props.className.priceNumber}>{menuItem.price2}</span></p>
                         </div>
-                            {menuItem.description ? <p className={props.className.itemDescription}>{menuItem.description}</p> : ""}
+                            {menuItem.description && <p className={props.className.itemDescription}>{menuItem.description}</p>}
                     </div>
                 })}
         </>

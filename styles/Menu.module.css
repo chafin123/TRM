@@ -1,34 +1,16 @@
 .menuContainer {
-    @apply  w-11/12 lg:w-5/12 mx-auto pt-24;
-    & > .menuEntry {
-        @apply w-full;
-    }
-    & > .menuHeader {
-        @apply w-full flex flex-row justify-between items-center pb-6;
-        & > .logoContainer:hover {
-            @apply cursor-pointer;
-            filter: saturate(5);
+    @apply  mx-auto;
+    & > .entriesContainer {
+        @apply mx-auto w-1/2;
+        & > .menuEntry {
+            @apply w-6/12 relative mx-auto;
+    
+            & > .menuSectionTitle {
+                @apply absolute left-[-14rem] top-6 text-4xl;
+            }
         }
-        & > button {
-            @apply border-2 w-fit h-fit border-basil-peat rounded-lg p-2 text-basil-peat text-xs;
-        }
-        button:hover {
-            filter: saturate(5);
-        }    
     }
 }
-.accordion {
-    @apply text-white mx-auto w-full my-3;
-    & > .subHeader {
-        @apply text-lg mb-1;
-    }
-    & > .accordionBody {
-        @apply pl-5;
-    }
-    & > .accordionBody:last-child {
-        @apply pb-10;
-    }
-        }
 .accordionItemContainer {
 @apply pt-8 pb-0 text-white flex flex-col text-start text-lg;
     & > .accordionPriceContainer {
@@ -45,7 +27,7 @@
         }
     }
     & > .itemDescription{
-        @apply text-sm tracking-wider italic;
+        @apply text-xl italic;
     }
 }
 .listContainer {
@@ -63,24 +45,9 @@
         }
     }
 }
-.accordion-header {
-    @apply text-center border border-basil-peat bg-gradient-to-r from-black/50 to-black/50 w-full h-fit mb-5 rounded-md;
-    & > .accordion-button {
-        @apply h-fit w-full text-xl font-nova-sans font-light tracking-wider py-3;   
-    }
-}
-.topAccordionItem:not(:focus-within).topAccordionItem:not(:hover).topAccordionItem:not(:active) {
-    @apply opacity-75;
-}
 .priceNumber {
-            @apply text-basil-peat font-bold pl-1;
+    @apply text-[#881b18] font-bold pl-1;
 }
-.foot {
-@apply flex justify-between;
-    & > .ctaContainer {
-    @apply text-basil-peat;
-    }
-    & > .iconContainer {
-    @apply w-3/12 flex flex-row justify-between;
-    }
+.itemText {
+    @apply text-2xl;
 }

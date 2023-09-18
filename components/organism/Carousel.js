@@ -10,11 +10,11 @@ const Carousel = () => {
 
     
     const movePrev = () => {
-        currentIndex <= 0 ? setCurrentIndex(7) : setCurrentIndex((prevState) => prevState -1)
+        currentIndex <= 0 ? setCurrentIndex(data.imageArray.length - 1) : setCurrentIndex((prevState) => prevState -1)
     };
 
     const moveNext = () => {
-        currentIndex >= 7 ? setCurrentIndex(0) : setCurrentIndex((prevState) => prevState + 1) 
+        currentIndex >= (data.imageArray.length - 1) ? setCurrentIndex(0) : setCurrentIndex((prevState) => prevState + 1) 
     }
 
       

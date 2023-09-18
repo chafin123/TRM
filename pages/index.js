@@ -1,37 +1,34 @@
-import Head from 'next/head'
-import Header from '../components/organism/Header'
-import Carousel from '../components/organism/Carousel'
-import styles from '../styles/Home.module.css'
-import Welcome from '../components/organism/Welcome'
-import Review from '../components/organism/Review'
-import Footer from '../components/organism/Footer'
-export default function Home({ data }) {
+import styles from '../styles/Menu.module.css'
+import Appetizers from './../components/molecules/Appetizers';
+import Entrees from '../components/molecules/Entrees';
+import tempData from '../shared/specials.json'
+import Soup from '../components/molecules/Soup';
+import Image from 'next/image';
+
+export default function Menu({ data }) {
+    return (
+    <div className={styles.menuContainer}>
+      <div className=" text-center">
+        <Image src="/../public/images/Turkey Red Logo@2x.png" alt='' width={400} height={400}/>
+      </div>
 
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Basil Ginger</title>
-        <meta name="description" content="Basil Ginger" />
-        <link rel="stylesheet" href="https://use.typekit.net/vbe1upt.css"></link>
-      </Head>
-      <Header href='#bop'/>
-
-      <main className={styles.main}>
-        <Carousel/>
-        <Welcome/>
-        <Review props={data}/>
-        <Footer id='bop'/>
-      </main>
-    </div>
-  )
+      <div className={styles.entriesContainer}>
+        <div className='text-center'>
+          <h2 className=' text-5xl'>Today's Specials</h2>
+        </div>
+          <Soup props={data} className={styles} moduleChange ={styles}/>
+          <Appetizers props={data} className={styles} moduleChange={styles}/>
+          <Entrees props={data} className={styles} moduleChange={styles}/>
+      </div>
+    </div>   
+    )
 }
 export async function getStaticProps() {
-  const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/restaurantMenu/reviews')
-  const data = await res.json()
-  return {
-      props: {
-          data,
-      },
-  }
+    const data = tempData;
+    return {
+        props: {
+            data,
+        },
+    }
 }

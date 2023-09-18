@@ -33,7 +33,7 @@ h2,
 h1,
 a,
 p {
-  @apply font-nova-sans tracking-wider;
+  @apply font-nova-sans tracking-wider text-[#881B1D];
 }
 @font-face {
   font-family:"gill-sans-nova";

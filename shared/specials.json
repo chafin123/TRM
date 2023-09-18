@@ -1,0 +1,60 @@
+[
+  {
+    "item": "Butter Chicken",
+    "description": "Chick and Butter",
+    "price1": 12.75,
+    "price2": "",
+    "category": "Entree",
+    "extra": false,
+    "active": true,
+    "id": 2
+  },
+  {
+    "item": "Chilli",
+    "description": "Beef And Beans",
+    "price1": 13.34,
+    "price2": "",
+    "category": "Entree",
+    "extra": false,
+    "active": true,
+    "id": 3
+  },
+  {
+    "item": "Clam Chowder",
+    "price1": 6,
+    "price2": 8,
+    "category": "Soup",
+    "extra": false,
+    "active": true,
+    "id": 4
+  },
+  {
+    "item": "German Potato Soup",
+    "price1": 7,
+    "price2": 9,
+    "category": "Soup",
+    "extra": false,
+    "active": true,
+    "id": 5
+  },
+  {
+    "item": "Baked Bree",
+    "description": "Bree Baked with berries and nuts",
+    "price1": 9,
+    "price2": "",
+    "category": "Appetizer",
+    "extra": false,
+    "active": true,
+    "id": 6
+  },
+  {
+    "item": "Bread",
+    "description": "Bread",
+    "price1": 2,
+    "price2": "",
+    "category": "Appetizer",
+    "extra": false,
+    "active": true,
+    "id": 7
+  }
+]

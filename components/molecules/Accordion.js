@@ -5,7 +5,9 @@ import {
   AccordionBody,
   AccordionItem,
 } from "reactstrap";
-import Image from "next/image";
+import FacebookIcon from '../../public/icons/facebook.svg'
+import InstagramIcon from '../../public/icons/instaham.svg'
+import EmailIcon from '../../public/icons/email.png'
 const FootAccord = (props) => {
   const [open, setOpen] = useState('');
     const toggle = (id) => {
@@ -47,32 +49,25 @@ const FootAccord = (props) => {
         <div className={props.className.iconContainer}>
           <div>
             <a href="https://www.facebook.com/basilgingerrestaurant/">
-                <Image 
-                    src='/icons/facebook.png'
-                    alt='facebook icon'
-                    height={20}
-                    width={20}
-                />
+              <FacebookIcon />
             </a>
             </div>
             <div>
             <a href="https://www.instagram.com/explore/locations/799258566887951/basil-ginger">
-                <Image 
-                    src='/icons/instagram.png'
-                    alt='facebook icon'
-                    height={20}
-                    width={20}
-                />
+              <picture>
+                <InstagramIcon />
+              </picture>
             </a>
             </div>
             <div>
             <a>
-                <Image 
+              <picture>
+                <img 
                     src='/icons/email.png'
-                    alt='facebook icon'
-                    height={16}
-                    width={20}
+                    alt='email icon'
+                    className={props.className.socialIcons}
                 />
+              </picture>
             </a>
             </div>
         </div>
