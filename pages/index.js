@@ -9,11 +9,11 @@ import Image from 'next/image';
 export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
-      <div className="text-center w-full flex justify-evenly before:contents-[''] before:absolute before:left-0 before:w-[100rem] before:h-[300px] before:z-[-1] before:bg-[#881b1d]">
-        <div className="pt-3 pb-10 flex">
-          <Image src="/images/logo.png" alt='' width={250} height={250}/>
+      <div className="text-center w-full flex justify-evenly before:bg-blend-multiply before:contents-[''] before:absolute before:left-0 before:w-[100rem] before:h-[300px] before:z-[-1] before:bg-[#881b1d]">
+        <div className="pt-3 pb-10 w-1/2 text-end pr-10">
+          <Image className=' mix-blend-multiply' src="/images/TurkeyRed.svg" alt='' width={250} height={250}/>
         </div>
-        <div className='pb-10 z-10 self-center flex'>
+        <div className='pb-10 z-10 self-center w-1/2 text-start'>
           <h2 className='text-white text-5xl'>Today's Specials</h2>
         </div>
       </div>
