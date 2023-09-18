@@ -17,7 +17,7 @@
         @apply pb-2;
         
         & > .itemDescription{
-            @apply text-2xl italic mt-[-8px] max-w-5xl;
+            @apply text-2xl italic mt-[-8px] max-w-[60%];
         }
         & > .itemText {
             @apply text-4xl font-extrabold;
