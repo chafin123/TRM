@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function Menu({ data }) {
     return (
     <div className={styles.menuContainer}>
-      <div className=" pb-16 text-center w-full before:bg-blend-multiply before:contents-[''] before:absolute before:left-0 before:w-[100rem] before:h-[300px] before:z-[-1] before:bg-[#881b1d]">
+      <div className=" pb-16 text-center w-full before:bg-blend-multiply before:contents-[''] before:absolute before:left-0 before:w-[100rem] before:h-[300px] before:z-[-1] before:bg-[#881b1d]/90">
         <div className="pt-10 flex justify-evenly">
           <div className="pt-10 pb-16 w-1/3 text-end pr-10">
             <Image className=' mix-blend-multiply' src="/images/TurkeyRed.svg" alt='' width={150} height={150}/>
