@@ -26,7 +26,7 @@ const Entrees = (props) => {
       <h3>Entrées</h3>
   </div>
   <div className={props.className.menuCatergoryContainer}>
-  {groupBy(props.props,"category")["Entree"].map((menuItem, index) => {
+  {groupBy(props.props.specials,"category")["Entree"].map((menuItem, index) => {
     if(menuItem.active)return (
         <div 
             className={props.className.menuItemContainer}

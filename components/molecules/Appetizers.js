@@ -9,7 +9,7 @@ const Appetizers = (props) => {
           <h3>Appetizers</h3>
       </div>
       <div className={props.className.menuCatergoryContainer}>
-      {groupBy(props.props,"category")["Appetizer"].map((menuItem, index) => {
+      {groupBy(props.props.specials,"category")["Appetizer"].map((menuItem, index) => {
         if(menuItem.active)return (
           <div
             className={props.className.menuItemContainer}
