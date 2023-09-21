@@ -28,7 +28,7 @@ export default function Menu({ data }) {
     </div>   
     )
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/turkeyRedMenu/specials')
   const data = await res.json()
 
