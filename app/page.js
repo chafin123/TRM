@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { groupBy } from 'lodash'
-import specialData from '../shared/specials.json'
 async function getData() {
   const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/turkeyRedMenu/specials', { cache: 'no-store' })
   // The return value is *not* serialized
@@ -57,9 +56,6 @@ export default async function Page() {
   </div>   
   )
 }
-
-  // const res = await fetch('https://api.sheety.co/b6dbcc47ec9ab905fd53f75df4e9a1c0/turkeyRedMenu/specials')
-  // const data = await res.json()
 
 
 
