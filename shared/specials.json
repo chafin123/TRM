@@ -1,0 +1,102 @@
+{
+  "specials":[
+      {
+        "item": "Apple Jack",
+        "description": "Apple Cider and tomato base",
+        "price1": 6,
+        "price2": 8,
+        "category": "Soup",
+        "extra": false,
+        "active": true,
+        "id": 2
+      },
+      {
+        "item": "Ribeye",
+        "description": "With a bacon and basil cream sauce",
+        "price1": 37,
+        "price2": "",
+        "category": "Entrées",
+        "extra": false,
+        "active": true,
+        "id": 3
+      },
+      {
+        "item": "Creamy vegetable",
+        "price1": 6,
+        "price2": 8,
+        "category": "Soup",
+        "extra": false,
+        "active": true,
+        "id": 4
+      },
+      {
+        "item": "Beef Chili",
+        "price1": 6,
+        "price2": 8,
+        "category": "Soup",
+        "extra": false,
+        "active": true,
+        "id": 5
+      },
+      {
+        "item": "Baked Brie",
+        "description": "With roasted apples and walnuts",
+        "price1": 12.50,
+        "price2": "",
+        "category": "Appetizer",
+        "extra": false,
+        "active": true,
+        "id": 6
+      },
+      {
+        "item": "Scallops",
+        "description": "With a bacon and basil cream sauce",
+        "price1": 15.75,
+        "price2": "",
+        "category": "Appetizer",
+        "extra": false,
+        "active": true,
+        "id": 7
+      },
+      {
+        "item": "Salmon",
+        "description": "Orange glazed with soy, ginger, sesame & garlic. Served with rice &. vegetables",
+        "price1": 37,
+        "price2": "",
+        "category": "Entrées",
+        "extra": false,
+        "active": true,
+        "id": 8
+      },
+      {
+        "item": "Cod",
+        "description": "Breaded & baked in white wine. Paremesan & parsley served with rice & vegetables",
+        "price1": 22,
+        "price2": "",
+        "category": "Entrées",
+        "extra": false,
+        "active": true,
+        "id": 9
+      },
+      {
+        "item": "Short Ribs",
+        "description": "Red win sauce with mashed potatoes & vegetables",
+        "price1": 26,
+        "price2": "",
+        "category": "Entrées",
+        "extra": false,
+        "active": true,
+        "id": 10
+      },
+      {
+        "item": "Pizza Special",
+        "description": "Bacon, jalepeño. mushroom with a garlic oil sauce",
+        "price1": 22,
+        "price2": "",
+        "category": "Entrées",
+        "extra": false,
+        "active": true,
+        "id": 11
+      }
+    ]
+  }
